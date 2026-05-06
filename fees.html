@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bus Fee Structure 2025–26 – RBT Regal Bus Transport</title>
+  <meta name="description" content="RBT school bus fee structure for Academic Year 2025-26. Transparent term-wise fees for all areas across Dubai, Sharjah and Ajman." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/enhanced.css" />
+
+  <style>
+    /* ── Fees Page Styles ── */
+    :root {
+      --blue-dark: #0A2E6E;
+      --blue-mid: #1259B5;
+      --cyan: #16A5E3;
+      --gold: #F5A623;
+      --green: #10B981;
+    }
+
+    /* Hero */
+    .fees-hero {
+      background: linear-gradient(135deg, #0A2E6E 0%, #1259B5 60%, #16A5E3 100%);
+      padding: 110px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .fees-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .fees-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+    }
+    .fees-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: #fff;
+      margin: 0 0 14px;
+      line-height: 1.2;
+    }
+    .fees-hero h1 span { color: #F5A623; }
+    .fees-hero p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 560px;
+      margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+    .fees-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #F5A623;
+      color: #0A2E6E;
+      font-weight: 800;
+      padding: 13px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 24px rgba(245,166,35,0.4);
+    }
+    .fees-hero-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(245,166,35,0.5); color: #0A2E6E; text-decoration: none; }
+
+    /* Main content */
+    .fees-page { padding: 60px 0 80px; background: #f7f9fc; }
+
+    /* Key info strip */
+    .fees-info-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .fis-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px 18px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 12px rgba(10,46,110,0.06);
+    }
+    .fis-icon {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      margin: 0 auto 10px;
+    }
+    .fis-icon-blue  { background: rgba(18,89,181,0.1);  color: #1259B5; }
+    .fis-icon-cyan  { background: rgba(22,165,227,0.1);  color: #16A5E3; }
+    .fis-icon-gold  { background: rgba(245,166,35,0.12); color: #d97706; }
+    .fis-icon-green { background: rgba(16,185,129,0.1);  color: #10B981; }
+    .fis-num {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #0A2E6E;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .fis-label { font-size: 0.75rem; color: #64748b; font-weight: 500; }
+
+    /* Section title */
+    .fees-section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0A2E6E;
+      margin: 0 0 6px;
+    }
+    .fees-section-sub {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin: 0 0 24px;
+    }
+
+    /* Tabs */
+    .fees-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .fees-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 2px solid #e2e8f0;
+      background: #fff;
+      color: #64748b;
+      transition: all 0.18s ease;
+    }
+    .fees-tab:hover { border-color: #1259B5; color: #1259B5; }
+    .fees-tab.active { background: #1259B5; color: #fff; border-color: #1259B5; box-shadow: 0 4px 14px rgba(18,89,181,0.25); }
+    .fees-tab-shj.active { background: #16A5E3; border-color: #16A5E3; }
+    .fees-tab-ajm.active { background: #F5A623; border-color: #F5A623; color: #7c3a00; }
+    .fees-tab .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+    }
+    .fees-tab-dxb .dot { background: #1259B5; }
+    .fees-tab-shj .dot { background: #16A5E3; }
+    .fees-tab-ajm .dot { background: #F5A623; }
+    .fees-tab-all .dot { background: #10B981; }
+    .fees-tab-dxb.active .dot,
+    .fees-tab-shj.active .dot { background: rgba(255,255,255,0.8); }
+
+    /* Table panel */
+    .fees-panel { display: none; }
+    .fees-panel.active { display: block; }
+
+    /* Fees Table */
+    .fees-table-wrap {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(10,46,110,0.07);
+    }
+    .fees-table-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .fth-dxb { background: linear-gradient(135deg, #0A2E6E, #1259B5); }
+    .fth-shj { background: linear-gradient(135deg, #0e6b99, #16A5E3); }
+    .fth-ajm { background: linear-gradient(135deg, #92400e, #d97706); }
+    .fth-all { background: linear-gradient(135deg, #0A2E6E, #16A5E3); }
+
+    .fees-table-header h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .fees-table-header p {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.65);
+      margin: 0;
+    }
+    .ft-badge {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.2);
+      white-space: nowrap;
+    }
+
+    table.fees-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    table.fees-table thead tr {
+      background: #f8faff;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    table.fees-table thead th {
+      padding: 12px 18px;
+      text-align: left;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    table.fees-table thead th:not(:first-child):not(:nth-child(2)) {
+      text-align: right;
+    }
+    table.fees-table tbody tr {
+      border-bottom: 1px solid #f1f5f9;
+      transition: background 0.12s;
+    }
+    table.fees-table tbody tr:last-child { border-bottom: none; }
+    table.fees-table tbody tr:hover { background: #f8faff; }
+    table.fees-table td {
+      padding: 13px 18px;
+      color: #334155;
+      vertical-align: middle;
+    }
+    table.fees-table td:not(:first-child):not(:nth-child(2)) {
+      text-align: right;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+    .td-sl {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #94a3b8;
+      width: 44px;
+    }
+    .td-area {
+      font-weight: 700;
+      color: #0A2E6E;
+      min-width: 200px;
+    }
+    .td-area small {
+      display: block;
+      font-size: 0.68rem;
+      color: #94a3b8;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+    .td-total {
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+    .total-dxb { color: #1259B5; }
+    .total-shj { color: #0e7baa; }
+    .total-ajm { color: #d97706; }
+
+    /* Contact Us merged cell — no blanks */
+    .td-contact {
+      text-align: left !important;
+      font-size: 0.82rem !important;
+      letter-spacing: 0.02em;
+    }
+    .td-contact i {
+      font-size: 0.72rem;
+      margin-right: 6px;
+      opacity: 0.75;
+    }
+
+    /* ── Section divider rows inside unified table ── */
+    .tr-section-dxb td,
+    .tr-section-shj td,
+    .tr-section-ajm td {
+      padding: 0 !important;
+      border-bottom: none !important;
+    }
+    .tr-section-dxb td { background: #EEF3FF; }
+    .tr-section-shj td { background: #E8F7FC; }
+    .tr-section-ajm td { background: #FEF8E8; }
+
+    .section-row-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .section-row-dxb { color: #1259B5; }
+    .section-row-dxb i { color: #1259B5; }
+    .section-row-shj { color: #0e7baa; }
+    .section-row-shj i { color: #16A5E3; }
+    .section-row-ajm { color: #a16207; }
+    .section-row-ajm i { color: #F5A623; }
+
+    /* Remove hover on section divider rows */
+    .tr-section-dxb:hover,
+    .tr-section-shj:hover,
+    .tr-section-ajm:hover { background: inherit !important; }
+
+    /* Term badges in header */
+    .term-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 4px;
+    }
+    .term-1 { background: #dbeafe; color: #1e40af; }
+    .term-2 { background: #dcfce7; color: #166534; }
+    .term-3 { background: #fef3c7; color: #92400e; }
+
+    /* Installment timeline */
+    .inst-timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+      margin-bottom: 36px;
+    }
+    .inst-item {
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 10px rgba(10,46,110,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .inst-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+    }
+    .inst-1::before { background: #1259B5; }
+    .inst-2::before { background: #10B981; }
+    .inst-3::before { background: #F5A623; }
+    .inst-num {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .inst-1 .inst-num { color: #1259B5; }
+    .inst-2 .inst-num { color: #10B981; }
+    .inst-3 .inst-num { color: #d97706; }
+    .inst-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #0A2E6E;
+      margin-bottom: 6px;
+    }
+    .inst-date {
+      font-size: 0.78rem;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .inst-date i { color: #94a3b8; }
+
+    /* Notes box */
+    .fees-notes {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-top: 28px;
+      box-shadow: 0 2px 14px rgba(10,46,110,0.07);
+    }
+    .fees-notes h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #0A2E6E;
+      margin: 0 0 22px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #eef3ff;
+    }
+    /* Note groups */
+    .fn-group {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .fn-group:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .fn-group-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #1259B5;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .fn-group-title i { font-size: 0.8rem; }
+    .fees-notes ul {
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .fees-notes ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 0.82rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+    .fees-notes ul li i {
+      color: #1259B5;
+      font-size: 0.7rem;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+    /* Contact grid */
+    .fn-contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 4px;
+    }
+    .fn-contact-card {
+      background: #f8faff;
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .fn-contact-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #0A2E6E;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .fn-contact-card a {
+      font-size: 0.8rem;
+      color: #1259B5;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: color 0.2s;
+    }
+    .fn-contact-card a:hover { color: #16A5E3; }
+    .fn-contact-card a i { font-size: 0.75rem; color: #64748b; flex-shrink: 0; }
+    @media (max-width: 600px) {
+      .fn-contact-grid { grid-template-columns: 1fr; }
+      .fees-notes { padding: 20px 16px; }
+    }
+
+    /* CTA section */
+    .fees-cta-section {
+      background: linear-gradient(135deg, #0A2E6E 0%, #1259B5 100%);
+      border-radius: 20px;
+      padding: 44px;
+      text-align: center;
+      margin-top: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .fees-cta-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 80% 50%, rgba(22,165,227,0.2) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .fees-cta-section h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #fff;
+      margin: 0 0 10px;
+    }
+    .fees-cta-section p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      margin: 0 0 28px;
+    }
+    .fees-cta-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .fees-cta-btns a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .fees-cta-btns a:hover { transform: translateY(-2px); }
+    .fcta-primary { background: #F5A623; color: #0A2E6E; box-shadow: 0 6px 20px rgba(245,166,35,0.4); }
+    .fcta-secondary { background: rgba(255,255,255,0.12); color: #fff; border: 2px solid rgba(255,255,255,0.25); }
+    .fcta-secondary:hover { background: rgba(255,255,255,0.2); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .fees-info-strip { grid-template-columns: repeat(2, 1fr); }
+      .fees-notes ul { grid-template-columns: 1fr; }
+      .inst-timeline { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .fees-info-strip { grid-template-columns: repeat(2, 1fr); }
+      .fees-cta-section { padding: 32px 20px; }
+      table.fees-table { font-size: 0.78rem; }
+      table.fees-table td, table.fees-table th { padding: 10px 12px; }
+      .fees-hero { padding: 90px 0 48px; }
+    }
+  </style>
+</head>
+
+<body class="lang-en">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <div class="logo-box">
+          <div class="logo-rbt">
+            <span class="logo-r">R</span><span class="logo-b">B</span><span class="logo-t">T</span>
+          </div>
+          <div class="logo-text-stack">
+            <span class="logo-ar">ريجال للنقل بالحافلات</span>
+            <span class="logo-en">REGAL BUS TRANSPORT</span>
+            <span class="logo-llc">L.L.C</span>
+          </div>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#coverage">Coverage</a></li>
+        <li><a href="fees.html" class="active-nav">Bus Fees</a></li>
+        <li><a href="index.html#fleet">Our Fleet</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="booking.html" class="btn-nav-cta">Register Now</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+          <span class="lang-en-label">عربي</span>
+          <span class="lang-ar-label">English</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="fees-hero">
+    <div class="container">
+      <div class="fees-hero-badge">
+        <i class="fas fa-file-invoice-dollar"></i>
+        Academic Year 2025–26
+      </div>
+      <h1>Bus Fee <span>Structure</span> AY 2025–26</h1>
+      <p>Transparent, term-wise pricing for all service areas across Dubai, Sharjah and Ajman. Fees payable in 3 installments.</p>
+      <a href="booking.html" class="fees-hero-cta">
+        <i class="fas fa-bus"></i>
+        Register Your Child
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== MAIN PAGE ===== -->
+  <section class="fees-page">
+    <div class="container">
+
+      <!-- Key Info Strip -->
+      <div class="fees-info-strip" data-aos="fade-up">
+        <div class="fis-card">
+          <div class="fis-icon fis-icon-blue"><i class="fas fa-route"></i></div>
+          <div class="fis-num">59</div>
+          <div class="fis-label">Total Routes</div>
+        </div>
+        <div class="fis-card">
+          <div class="fis-icon fis-icon-cyan"><i class="fas fa-map-location-dot"></i></div>
+          <div class="fis-num">16</div>
+          <div class="fis-label">Service Areas (AUS)</div>
+        </div>
+        <div class="fis-card">
+          <div class="fis-icon fis-icon-gold"><i class="fas fa-calendar-check"></i></div>
+          <div class="fis-num">3</div>
+          <div class="fis-label">Term Installments</div>
+        </div>
+        <div class="fis-card">
+          <div class="fis-icon fis-icon-green"><i class="fas fa-bus"></i></div>
+          <div class="fis-num">81</div>
+          <div class="fis-label">Buses in Fleet</div>
+        </div>
+      </div>
+
+      <!-- Installment Timeline -->
+      <div data-aos="fade-up">
+        <h2 class="fees-section-title">Payment Installment Schedule</h2>
+        <p class="fees-section-sub">Fees are split into 3 term-wise installments for AY 2025–26</p>
+        <div class="inst-timeline">
+          <div class="inst-item inst-1">
+            <div class="inst-num">1st Installment</div>
+            <div class="inst-title">First Term</div>
+            <div class="inst-date"><i class="fas fa-calendar"></i> Due on or before 25th August 2025</div>
+          </div>
+          <div class="inst-item inst-2">
+            <div class="inst-num">2nd Installment</div>
+            <div class="inst-title">Second Term</div>
+            <div class="inst-date"><i class="fas fa-calendar"></i> Due on or before 1st January 2026</div>
+          </div>
+          <div class="inst-item inst-3">
+            <div class="inst-num">3rd Installment</div>
+            <div class="inst-title">Third Term</div>
+            <div class="inst-date"><i class="fas fa-calendar"></i> Due on or before 1st April 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ UNIFIED FEES TABLE — All Areas in One Place ══ -->
+      <div data-aos="fade-up">
+        <h2 class="fees-section-title">Fee Structure</h2>
+        <p class="fees-section-sub">AUS Bus Fees for Academic Year 2025–26 · Dubai Routes</p>
+
+        <div class="fees-table-wrap">
+          <!-- Single unified header -->
+          <div class="fees-table-header fth-all">
+            <div>
+              <h3><i class="fas fa-graduation-cap"></i> RBT Bus Fees — AY 2025–26</h3>
+              <p>All pickup areas across Dubai, Sharjah &amp; Ajman — term-wise breakdown</p>
+            </div>
+            <span class="ft-badge">16 Areas &nbsp;·&nbsp; 56 Routes</span>
+          </div>
+
+          <div style="overflow-x:auto;">
+            <table class="fees-table">
+              <thead>
+                <tr>
+                  <th>SL#</th>
+                  <th>Area / Zone</th>
+                  <th>1st Term <span class="term-badge term-1">Aug</span></th>
+                  <th>2nd Term <span class="term-badge term-2">Jan</span></th>
+                  <th>3rd Term <span class="term-badge term-3">Apr</span></th>
+                  <th>Total (Dhs.)</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- ── Dubai / AUS Routes ── -->
+                <tr class="tr-section-dxb">
+                  <td colspan="6">
+                    <span class="section-row-label section-row-dxb">
+                      <i class="fas fa-building"></i> Dubai Routes &nbsp;·&nbsp; دبي
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-sl">1</td>
+                  <td class="td-area">Mirdif / Mizhar-1 / Muhaisna-1<small>مردف / مزهر-1 / مهيسنة-1</small></td>
+                  <td>1,200</td><td>900</td><td>900</td>
+                  <td class="td-total total-dxb">3,000</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">2</td>
+                  <td class="td-area">Rashidiya / Al Warqa / Oud Muteena<small>الراشدية / الورقاء / عود المطينة</small></td>
+                  <td>1,320</td><td>990</td><td>990</td>
+                  <td class="td-total total-dxb">3,300</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">3</td>
+                  <td class="td-area">Al Qusais / Al Twar<small>القصيص / الطوار</small></td>
+                  <td>1,520</td><td>1,140</td><td>1,140</td>
+                  <td class="td-total total-dxb">3,800</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">4</td>
+                  <td class="td-area">Muhaisnah-4 / Alwasl Village<small>مهيسنة-4 / قرية الوصل</small></td>
+                  <td>1,560</td><td>1,170</td><td>1,170</td>
+                  <td class="td-total total-dxb">3,900</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">5</td>
+                  <td class="td-area">Al Nahda (Dubai)<small>النهدة (دبي)</small></td>
+                  <td>1,680</td><td>1,260</td><td>1,260</td>
+                  <td class="td-total total-dxb">4,200</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">6</td>
+                  <td class="td-area">International City / Ras Al Khor / Nadd Al Hammar / Garhoud<small>المدينة الدولية / رأس الخور / ند الحمر / القرهود</small></td>
+                  <td>1,680</td><td>1,260</td><td>1,260</td>
+                  <td class="td-total total-dxb">4,200</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">7</td>
+                  <td class="td-area">Silicon Oasis / Academic City / Sky Courts / Liwan<small>واحة السيليكون / مدينة الأكاديميين / سكاي كورتس / ليوان</small></td>
+                  <td>1,800</td><td>1,350</td><td>1,350</td>
+                  <td class="td-total total-dxb">4,500</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">8</td>
+                  <td class="td-area">Deira / Al Mamzar<small>ديرة / الممزر</small></td>
+                  <td>1,800</td><td>1,350</td><td>1,350</td>
+                  <td class="td-total total-dxb">4,700</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">9</td>
+                  <td class="td-area">Bur Dubai / Karama / Jaddaf<small>بر دبي / الكرامة / الجداف</small></td>
+                  <td>1,800</td><td>1,350</td><td>1,350</td>
+                  <td class="td-total total-dxb">4,700</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">10</td>
+                  <td class="td-area">Al Satwa<small>السطوة</small></td>
+                  <td>1,920</td><td>1,440</td><td>1,440</td>
+                  <td class="td-total total-dxb">4,800</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">11</td>
+                  <td class="td-area">Al Sharjah<small>الشارقة</small></td>
+                  <td>2,000</td><td>1,500</td><td>1,500</td>
+                  <td class="td-total total-dxb">5,000</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">12</td>
+                  <td class="td-area">Al Quoz<small>القوز</small></td>
+                  <td>2,160</td><td>1,620</td><td>1,620</td>
+                  <td class="td-total total-dxb">5,400</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">13</td>
+                  <td class="td-area">Al Barsha 1<small>البرشاء 1</small></td>
+                  <td>2,320</td><td>1,740</td><td>1,740</td>
+                  <td class="td-total total-dxb">5,800</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">14</td>
+                  <td class="td-area">Ajman<small>عجمان</small></td>
+                  <td>2,320</td><td>1,740</td><td>1,740</td>
+                  <td class="td-total total-dxb">5,800</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">15</td>
+                  <td class="td-area">Majan / Al Barari<small>مجان / البراري</small></td>
+                  <td>2,600</td><td>1,950</td><td>1,950</td>
+                  <td class="td-total total-dxb">6,500</td>
+                </tr>
+                <tr>
+                  <td class="td-sl">16</td>
+                  <td class="td-area">JVC / Dubai Sports City<small>قرية الجميرا الدائرية / مدينة دبي الرياضية</small></td>
+                  <td>2,800</td><td>2,100</td><td>2,100</td>
+                  <td class="td-total total-dxb">7,000</td>
+                </tr>
+
+
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Footer notes inside table card -->
+          <div style="padding:14px 24px;background:#f0f9ff;border-top:1px solid #bae6fd;font-size:0.78rem;color:#0369a1;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <i class="fas fa-circle-info" style="flex-shrink:0;"></i>
+            Fees cover 10 months of transport (FS.2 to Year 13) for the full academic year, payable in 3 term-wise installments.
+            For fee &amp; payment queries: <strong><a href="mailto:rbtaccounts@arabunityschool.ae" style="color:#0369a1;">rbtaccounts@arabunityschool.ae</a></strong> ·
+            <strong><a href="mailto:creditcontrol@arabunityschool.ae" style="color:#0369a1;">creditcontrol@arabunityschool.ae</a></strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notes -->
+      <div class="fees-notes" data-aos="fade-up">
+        <h4><i class="fas fa-circle-info" style="color:#1259B5;"></i> Important Notes — Bus Transport Fees AY 2025–26</h4>
+
+        <!-- Registration -->
+        <div class="fn-group">
+          <div class="fn-group-title"><i class="fas fa-file-signature"></i> Registration</div>
+          <ul>
+            <li><i class="fas fa-angle-right"></i> You will need to fill in the <strong>bus registration form</strong> and get confirmation from the RBT office.</li>
+            <li><i class="fas fa-angle-right"></i> If the student did <strong>not</strong> use the bus service in AY 2025–26, a registration fee of <strong>AED 50</strong> will be applicable.</li>
+          </ul>
+        </div>
+
+        <!-- Fee Structure & Installments -->
+        <div class="fn-group">
+          <div class="fn-group-title"><i class="fas fa-calendar-alt"></i> Fee Structure &amp; Installments</div>
+          <ul>
+            <li><i class="fas fa-angle-right"></i> Transport fee (FS.2 to Year 13) is calculated for <strong>ten months</strong> in an academic year, payable in <strong>3 term-wise installments</strong>.</li>
+            <li><i class="fas fa-angle-right"></i> <strong>1st Installment</strong> — on or before <strong>30th August 2026</strong></li>
+            <li><i class="fas fa-angle-right"></i> <strong>2nd Installment</strong> — on or before <strong>1st January 2027</strong></li>
+            <li><i class="fas fa-angle-right"></i> <strong>3rd Installment</strong> — on or before <strong>1st April 2027</strong></li>
+            <li><i class="fas fa-angle-right"></i> There will be <strong>no refund</strong> for the unused portion of the term.</li>
+          </ul>
+        </div>
+
+        <!-- Routes & Availability -->
+        <div class="fn-group">
+          <div class="fn-group-title"><i class="fas fa-route"></i> Routes &amp; Availability</div>
+          <ul>
+            <li><i class="fas fa-angle-right"></i> Buses operate on <strong>specific routes</strong> and may cover only some portions of the listed areas.</li>
+            <li><i class="fas fa-angle-right"></i> You are advised to <strong>confirm availability</strong> of the transport service with the Regal Bus Transport department <strong>before admission</strong>.</li>
+          </ul>
+        </div>
+
+        <!-- Payment Information -->
+        <div class="fn-group">
+          <div class="fn-group-title"><i class="fas fa-credit-card"></i> Payment Information</div>
+          <ul>
+            <li><i class="fas fa-angle-right"></i> Accepted methods: <strong>Cash</strong>, <strong>Current-dated Cheque</strong> (payable to Regal Bus Transport LLC), <strong>Skiply Mobile App</strong>.</li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="fn-group fn-group-contact">
+          <div class="fn-group-title"><i class="fas fa-headset"></i> Contact Information</div>
+          <div class="fn-contact-grid">
+            <div class="fn-contact-card">
+              <div class="fn-contact-label"><i class="fas fa-file-invoice-dollar"></i> Fee &amp; Payment Queries</div>
+              <a href="mailto:rbtaccounts@arabunityschool.ae"><i class="fas fa-envelope"></i> rbtaccounts@arabunityschool.ae</a>
+              <a href="mailto:creditcontrol@arabunityschool.ae"><i class="fas fa-envelope"></i> creditcontrol@arabunityschool.ae</a>
+            </div>
+            <div class="fn-contact-card">
+              <div class="fn-contact-label"><i class="fas fa-bus"></i> Transport Service Queries</div>
+              <a href="mailto:atef@regalbustransport.ae"><i class="fas fa-envelope"></i> atef@regalbustransport.ae</a>
+              <a href="tel:0042809343"><i class="fas fa-phone"></i> 04-280 9343</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Section -->
+      <div class="fees-cta-section" data-aos="fade-up">
+        <h3>Ready to Register Your Child?</h3>
+        <p>Our team will confirm your area, route and fees within 3 working days.</p>
+        <div class="fees-cta-btns">
+          <a href="booking.html" class="fcta-primary">
+            <i class="fas fa-bus"></i> Register Now
+          </a>
+          <a href="mailto:atef@regalbustransport.ae" class="fcta-secondary">
+            <i class="fas fa-envelope"></i> atef@regalbustransport.ae
+          </a>
+          <a href="tel:042809343" class="fcta-secondary">
+            <i class="fas fa-phone"></i> 04-280 9343
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (minimal) ===== -->
+  <footer style="background:#0A2E6E;padding:28px 0;text-align:center;">
+    <div class="container">
+      <p style="color:rgba(255,255,255,0.55);font-size:0.8rem;margin:0;">
+        © 2025 Regal Bus Transport LLC · <a href="index.html" style="color:#16A5E3;text-decoration:none;">Back to Home</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 600, once: true, offset: 60 });
+
+    /* Tab switcher */
+    function switchTab(id) {
+      document.querySelectorAll('.fees-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.fees-tab').forEach(t => t.classList.remove('active'));
+      document.getElementById('panel-' + id).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+
+    /* Navbar scroll */
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 30);
+    });
+
+    /* Hamburger */
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+
+    /* Language toggle (basic) */
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('lang-ar');
+      document.body.classList.toggle('lang-en');
+      document.getElementById('html-root').dir =
+        document.body.classList.contains('lang-ar') ? 'rtl' : 'ltr';
+    });
+  </script>
+</body>
+</html>

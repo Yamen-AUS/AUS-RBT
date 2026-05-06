@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RBT – Regal Bus Transport | Safe School Transportation Dubai</title>
+  <meta name="description" content="Regal Bus Transport (RBT) – Dubai's premier independent school bus provider. GPS-tracked, RTA-certified, 81-bus fleet. Serving families since 2009." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/enhanced.css" />
+
+  <!-- AWS Areas We Serve – scoped override (highest priority) -->
+  <style>
+    /* ══════════════════════════════════════════════
+       AREAS WE SERVE — Redesigned to Match Site
+       Uses same design language as .service-spotlight-card
+       ══════════════════════════════════════════════ */
+
+    /* ── Wrapper ── */
+    .aws-section {
+      margin-top: 40px;
+    }
+
+    /* ── Section Label + Heading (matches site's .section-header pattern) ── */
+    .aws-section-intro {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .aws-section-tag {
+      display: inline-block;
+      background: #E8F4FC;
+      color: #1259B5;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+    .aws-section-title {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 800;
+      color: #0D1B2E;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .aws-section-sub {
+      font-size: 0.92rem;
+      color: #475569;
+      margin: 0;
+    }
+
+    /* ── Stats Row (mirrors live-strip / analytics style) ── */
+    .aws-stats-row {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      background: linear-gradient(135deg, #0A2E6E 0%, #0f3d8a 60%, #1259B5 100%);
+      border-radius: 16px 16px 0 0;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(10,46,110,0.18);
+    }
+    .aws-stat-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 16px;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .aws-stat-item:last-child { border-right: none; }
+    .aws-stat-item:hover { background: rgba(255,255,255,0.05); }
+    .aws-stat-icon {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: rgba(22,165,227,0.18);
+      border: 1px solid rgba(22,165,227,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #38bdf8;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .aws-stat-num {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 3px;
+      font-family: 'Inter', sans-serif;
+    }
+    .aws-stat-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    /* Gold accent for middle stat */
+    .aws-stat-item.aws-stat-gold .aws-stat-icon {
+      background: rgba(245,166,35,0.2);
+      border-color: rgba(245,166,35,0.35);
+      color: #F5A623;
+    }
+    .aws-stat-item.aws-stat-gold .aws-stat-num { color: #F5A623; }
+
+    /* ── Cards Grid ── */
+    .aws-cards-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 0 !important;
+      border: 1px solid #e2e8f0 !important;
+      border-top: none !important;
+      border-radius: 0 0 16px 16px !important;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(10,46,110,0.1);
+    }
+
+    /* ── Individual Card ── */
+    .aws-card {
+      background: #fff !important;
+      border-right: 1px solid #e2e8f0 !important;
+      transition: background 0.2s;
+    }
+    .aws-card:last-child { border-right: none !important; }
+
+    /* Colored top stripe per emirate */
+    .aws-card-dxb {
+      border-top: 4px solid #1259B5 !important;
+    }
+    .aws-card-shj {
+      border-top: 4px solid #16A5E3 !important;
+    }
+    .aws-card-ajm {
+      border-top: 4px solid #F5A623 !important;
+    }
+
+    /* ── Card Header ── */
+    .aws-card-header {
+      display: flex !important;
+      align-items: center !important;
+      padding: 24px 24px 20px 24px !important;
+      gap: 16px;
+    }
+    .aws-card-header-left {
+      display: flex !important;
+      align-items: center !important;
+      gap: 14px;
+      flex: 1;
+    }
+
+    /* Emirate Icon Badge (matches .ss-icon style) */
+    .aws-emirate-flag {
+      width: 48px !important;
+      height: 48px !important;
+      border-radius: 14px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 1.4rem !important;
+      flex-shrink: 0 !important;
+    }
+    .aws-flag-dxb {
+      background: linear-gradient(135deg, rgba(18,89,181,0.12), rgba(18,89,181,0.06)) !important;
+      border: 1.5px solid rgba(18,89,181,0.18) !important;
+    }
+    .aws-flag-shj {
+      background: linear-gradient(135deg, rgba(22,165,227,0.12), rgba(22,165,227,0.06)) !important;
+      border: 1.5px solid rgba(22,165,227,0.2) !important;
+    }
+    .aws-flag-ajm {
+      background: linear-gradient(135deg, rgba(245,166,35,0.14), rgba(245,166,35,0.07)) !important;
+      border: 1.5px solid rgba(245,166,35,0.25) !important;
+    }
+
+    .aws-emirate-info { min-width: 0; flex: 1; }
+
+    .aws-emirate-name {
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      color: #0A2E6E !important;
+      margin-bottom: 4px !important;
+      display: flex !important;
+      align-items: baseline !important;
+      gap: 8px;
+    }
+    .aws-emirate-ar {
+      font-size: 0.8rem !important;
+      font-weight: 500 !important;
+      color: #94a3b8 !important;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .aws-emirate-meta {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    /* Chips — match .section-tag pill style */
+    .aws-meta-chip {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+      font-size: 0.7rem !important;
+      font-weight: 700 !important;
+      padding: 4px 11px !important;
+      border-radius: 50px !important;
+      white-space: nowrap;
+    }
+    .aws-chip-dxb     { background: rgba(18,89,181,0.1) !important;  color: #1259B5 !important; }
+    .aws-chip-shj     { background: rgba(22,165,227,0.1) !important;  color: #0e7baa !important; }
+    .aws-chip-ajm     { background: rgba(245,166,35,0.13) !important; color: #a16207 !important; }
+    .aws-chip-route     { background: #F1F5F9 !important; color: #475569 !important; }
+    .aws-chip-route-shj { background: rgba(22,165,227,0.08) !important; color: #0e7baa !important; }
+    .aws-chip-route-ajm { background: rgba(245,166,35,0.1) !important;  color: #a16207 !important; }
+
+    /* ── CTA Row ── */
+    .aws-cta-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 28px;
+    }
+    .aws-cta-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 9px !important;
+      padding: 13px 32px !important;
+      background: linear-gradient(90deg, #1E9BD7 0%, #16A5E3 100%) !important;
+      color: #fff !important;
+      border-radius: 50px !important;
+      font-size: 0.9rem !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      border: none !important;
+      box-shadow: 0 4px 20px rgba(22,165,227,0.35) !important;
+      transition: transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .aws-cta-btn:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 30px rgba(22,165,227,0.5) !important;
+      color: #fff !important;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .aws-stats-row { border-radius: 12px 12px 0 0; }
+      .aws-cards-grid { grid-template-columns: 1fr !important; }
+      .aws-card { border-right: none !important; border-bottom: 1px solid #e2e8f0 !important; }
+      .aws-card:last-child { border-bottom: none !important; }
+    }
+    @media (max-width: 640px) {
+      .aws-stats-row { flex-wrap: wrap; border-radius: 12px 12px 0 0; }
+      .aws-stat-item { flex: 1 1 33%; border-right: 1px solid rgba(255,255,255,0.1); }
+      .aws-card-header { padding: 18px 18px 16px !important; }
+    }
+  </style>
+</head>
+
+<body class="lang-en">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <div class="logo-box">
+          <div class="logo-rbt"><span class="logo-r">R</span><span class="logo-b">B</span><span class="logo-t">T</span></div>
+          <div class="logo-text-stack">
+            <span class="logo-ar">ريجال للنقل بالحافلات</span>
+            <span class="logo-en">REGAL BUS TRANSPORT</span>
+            <span class="logo-llc">L.L.C</span>
+          </div>
+        </div>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services"    data-en="Services"   data-ar="الخدمات">Services</a></li>
+        <li><a href="#safety"      data-en="Safety"     data-ar="السلامة">Safety</a></li>
+        <li><a href="#analytics"   data-en="Analytics"  data-ar="التحليلات">Analytics</a></li>
+        <li><a href="#fleet"       data-en="Fleet"      data-ar="الأسطول">Fleet</a></li>
+        <li><a href="#coverage"    data-en="Coverage"   data-ar="التغطية">Coverage</a></li>
+        <li><a href="#about"       data-en="About"      data-ar="من نحن">About</a></li>
+        <li><a href="#contact"     data-en="Contact"    data-ar="اتصل بنا">Contact</a></li>
+        <li><a href="fees.html"    data-en="Bus Fees"   data-ar="رسوم الباص" style="color:var(--gold);font-weight:700;"><i class="fas fa-file-invoice-dollar" style="font-size:0.75rem;margin-right:3px;"></i>Bus Fees</a></li>
+        <li><a href="booking.html" class="btn-nav-cta" data-en="Book Now" data-ar="احجز الآن">Book Now</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="lang-toggle" id="lang-toggle">
+          <span class="lang-en-label">عربي</span>
+          <span class="lang-ar-label">English</span>
+        </button>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO – VIDEO BG ===== -->
+  <section class="hero hero-video-bg" id="hero">
+    <!-- Video Background -->
+    <div class="hero-video-wrap">
+      <video autoplay muted loop playsinline class="hero-video" id="hero-bg-video">
+        <source src="https://cdn.coverr.co/videos/coverr-dubai-highway-traffic-6869/1080p.mp4" type="video/mp4" />
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-highway-in-the-middle-of-the-city-4405-large.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <!-- Animated speed lines -->
+    <div class="hero-animated-lines">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-badge" data-en="🏆 Serving Dubai Since 2009" data-ar="🏆 نخدم دبي منذ عام 2009">🏆 Serving Dubai Since 2009</div>
+      <h1 class="hero-title">
+        <span class="hero-title-en">Where Every Journey<br/><span class="text-gradient">Begins With Safety</span></span>
+        <span class="hero-title-ar" style="display:none;">كل رحلة تبدأ<br/><span class="text-gradient">بالأمان</span></span>
+      </h1>
+      <p class="hero-subtitle" data-en="Dubai's premier independent school transportation provider. GPS-tracked, RTA-certified, and trusted by families across the city." data-ar="الشركة المستقلة الرائدة في نقل الطلاب بدبي. أسطول مُجهَّز بنظام GPS، معتمد من هيئة الطرق والمواصلات، وموثوق به لدى عائلات في جميع أنحاء المدينة.">Dubai's premier independent school transportation provider. GPS-tracked, RTA-certified, and trusted by families across the city.</p>
+      <div class="hero-actions">
+        <a href="booking.html" class="btn btn-primary btn-lg"><i class="fas fa-bus"></i> <span data-en="Register Your Child" data-ar="سجّل طفلك الآن">Register Your Child</span></a>
+        <a href="#services" class="btn btn-outline-white btn-lg"><span data-en="Explore Services" data-ar="استكشف خدماتنا">Explore Services</span> <i class="fas fa-arrow-right btn-icon-right"></i></a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-badge"><i class="fas fa-shield-halved"></i><span data-en="RTA Certified" data-ar="معتمد هيئة الطرق">RTA Certified</span></div>
+        <div class="trust-badge"><i class="fas fa-location-dot"></i><span data-en="Live GPS" data-ar="GPS مباشر">Live GPS</span></div>
+        <div class="trust-badge"><i class="fas fa-video"></i><span data-en="CCTV On Board" data-ar="كاميرات مراقبة">CCTV On Board</span></div>
+        <div class="trust-badge"><i class="fas fa-id-card"></i><span data-en="Certified Drivers" data-ar="سائقون معتمدون">Certified Drivers</span></div>
+        <div class="trust-badge"><i class="fas fa-bell"></i><span data-en="Parent Alerts" data-ar="تنبيهات فورية">Parent Alerts</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll"><div class="scroll-mouse"><div class="scroll-wheel"></div></div></div>
+  </section>
+
+  <!-- ===== LIVE DASHBOARD STRIP ===== -->
+  <section class="live-strip">
+    <div class="container live-strip-inner">
+      <div class="live-dot-wrap"><span class="live-dot"></span><span data-en="Live Operations" data-ar="العمليات المباشرة">Live Operations</span></div>
+      <div class="live-stat"><i class="fas fa-bus"></i> <strong>77</strong> <span data-en="Buses Active" data-ar="حافلة نشطة">Buses Active</span></div>
+      <div class="live-stat"><i class="fas fa-route"></i> <strong>77</strong> <span data-en="Routes (DXB·SHJ·AJM)" data-ar="مسار دبي والشارقة وعجمان">Routes (DXB·SHJ·AJM)</span></div>
+      <div class="live-stat"><i class="fas fa-user-graduate"></i> <strong>2,500+</strong> <span data-en="Students/Day" data-ar="طالب/يوم">Students/Day</span></div>
+      <div class="live-stat"><i class="fas fa-clock"></i> <strong>97%</strong> <span data-en="On-Time Rate" data-ar="معدل الانضباط">On-Time Rate</span></div>
+      <div class="live-stat"><i class="fas fa-star"></i> <strong>4.9/5</strong> <span data-en="Parent Rating" data-ar="تقييم أولياء الأمور">Parent Rating</span></div>
+    </div>
+  </section>
+
+  <!-- ===== STATS STRIP ===== -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-number" data-target="81">0</div>
+          <div class="stat-label" data-en="Buses in Fleet" data-ar="حافلة في الأسطول">Buses in Fleet</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label" data-en="Years of Excellence" data-ar="عام من التميز">Years of Excellence</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number counter-plus" data-target="2500">0</div>
+          <div class="stat-label" data-en="Students Daily" data-ar="طالب يومياً">Students Daily</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number counter-percent" data-target="100">0</div>
+          <div class="stat-label" data-en="RTA Compliance" data-ar="امتثال هيئة الطرق">RTA Compliance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES WITH IMAGES ===== -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag" data-en="What We Offer" data-ar="ما نقدمه">What We Offer</span>
+        <h2 class="section-title" data-en="Comprehensive Transport Solutions" data-ar="حلول نقل متكاملة">Comprehensive Transport Solutions</h2>
+        <p class="section-subtitle" data-en="From daily school routes to specialised transport, we've got every student covered." data-ar="من المسارات اليومية إلى النقل المتخصص، نضمن تغطية كاملة لكل طالب.">From daily school routes to specialised transport, we've got every student covered.</p>
+      </div>
+
+      <!-- Service Spotlight Cards with Images -->
+      <div class="service-spotlight-grid">
+
+        <!-- Card 1: Daily Routes -->
+        <div class="service-spotlight-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="ss-img-wrap">
+            <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=900&q=80&fit=crop" alt="School buses fleet" loading="lazy" />
+            <div class="ss-img-overlay">
+              <span class="ss-tag" data-en="Daily Routes" data-ar="المسارات اليومية">Daily Routes</span>
+            </div>
+          </div>
+          <div class="ss-body">
+            <div class="ss-icon"><i class="fas fa-route"></i></div>
+            <h3 data-en="Daily School Routes" data-ar="المسارات المدرسية اليومية">Daily School Routes</h3>
+            <p data-en="Optimised morning and afternoon routes across Dubai. Fixed schedules, punctual service, every single day." data-ar="مسارات منظّمة للصباح والمساء تغطي أبرز مناطق دبي. مواعيد ثابتة وخدمة دقيقة كل يوم.">Optimised morning and afternoon routes across Dubai. Fixed schedules, punctual service, every single day.</p>
+            <ul class="ss-features">
+              <li><i class="fas fa-check"></i> <span data-en="Door-to-school service" data-ar="من المنزل إلى المدرسة">Door-to-school service</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Fixed, reliable schedules" data-ar="مواعيد ثابتة وموثوقة">Fixed, reliable schedules</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Real-time parent SMS" data-ar="رسائل نصية فورية">Real-time parent SMS</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 2: Safety-First (Featured) -->
+        <div class="service-spotlight-card ss-featured" data-aos="fade-up" data-aos-delay="100">
+          <div class="ss-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=900&q=80&fit=crop" alt="School bus safety technology" loading="lazy" />
+            <div class="ss-img-overlay">
+              <span class="ss-tag ss-tag-gold" data-en="Most Popular" data-ar="الأكثر طلبًا">Most Popular</span>
+            </div>
+          </div>
+          <div class="ss-body">
+            <div class="ss-icon ss-icon-gold"><i class="fas fa-shield-halved"></i></div>
+            <h3 data-en="Safety-First Transport" data-ar="النقل الآمن أولاً">Safety-First Transport</h3>
+            <p data-en="Every bus equipped with CCTV, GPS, trained attendants and emergency protocols certified by Dubai's RTA." data-ar="كل حافلة مزودة بكاميرات CCTV ونظام GPS ومرافقين مدرّبين وبروتوكولات طوارئ معتمدة.">Every bus equipped with CCTV, GPS, trained attendants and emergency protocols certified by Dubai's RTA.</p>
+            <ul class="ss-features">
+              <li><i class="fas fa-check"></i> <span data-en="CCTV on every bus" data-ar="كاميرات على كل حافلة">CCTV on every bus</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Trained attendants" data-ar="مرافقون مدرّبون">Trained attendants</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Emergency protocols" data-ar="بروتوكولات طوارئ">Emergency protocols</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 3: GPS Tracking -->
+        <div class="service-spotlight-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="ss-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80&fit=crop" alt="GPS school bus tracking system" loading="lazy" />
+            <div class="ss-img-overlay">
+              <span class="ss-tag" data-en="Smart Tech" data-ar="تقنية ذكية">Smart Tech</span>
+            </div>
+          </div>
+          <div class="ss-body">
+            <div class="ss-icon"><i class="fas fa-satellite-dish"></i></div>
+            <h3 data-en="Live GPS Tracking" data-ar="تتبع GPS مباشر">Live GPS Tracking</h3>
+            <p data-en="Parents know exactly where the bus is at all times. Real-time location, speed monitoring, and route deviation alerts." data-ar="أولياء الأمور يعرفون بالضبط أين الحافلة في أي وقت. موقع فوري ومراقبة سرعة وتنبيهات انحراف المسار.">Parents know exactly where the bus is at all times. Real-time location, speed monitoring, and route deviation alerts.</p>
+            <ul class="ss-features">
+              <li><i class="fas fa-check"></i> <span data-en="Real-time bus location" data-ar="موقع الحافلة لحظياً">Real-time bus location</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Speed monitoring" data-ar="مراقبة السرعة">Speed monitoring</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Route deviation alerts" data-ar="تنبيهات انحراف المسار">Route deviation alerts</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 4: Driver Training -->
+        <div class="service-spotlight-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="ss-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80&fit=crop" alt="Professional bus driver training" loading="lazy" />
+            <div class="ss-img-overlay">
+              <span class="ss-tag" data-en="Trained Team" data-ar="فريق مدرّب">Trained Team</span>
+            </div>
+          </div>
+          <div class="ss-body">
+            <div class="ss-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3 data-en="Professional Drivers" data-ar="سائقون محترفون">Professional Drivers</h3>
+            <p data-en="All drivers undergo comprehensive training in safe driving, student management, first aid and emergency response." data-ar="يخضع جميع السائقين لتدريب شامل في القيادة الآمنة وإدارة الطلاب والإسعافات الأولية والاستجابة للطوارئ.">All drivers undergo comprehensive training in safe driving, student management, first aid and emergency response.</p>
+            <ul class="ss-features">
+              <li><i class="fas fa-check"></i> <span data-en="Background-checked" data-ar="فحص أمني كامل">Background-checked</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="First aid certified" data-ar="معتمد إسعافات أولية">First aid certified</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Annual refresher training" data-ar="تدريب سنوي تجديدي">Annual refresher training</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 5: Fleet Maintenance -->
+        <div class="service-spotlight-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="ss-img-wrap">
+            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=900&q=80&fit=crop" alt="Bus fleet transport management" loading="lazy" />
+            <div class="ss-img-overlay">
+              <span class="ss-tag" data-en="Fleet Care" data-ar="صيانة الأسطول">Fleet Care</span>
+            </div>
+          </div>
+          <div class="ss-body">
+            <div class="ss-icon"><i class="fas fa-tools"></i></div>
+            <h3 data-en="Fleet Maintenance" data-ar="صيانة الأسطول">Fleet Maintenance</h3>
+            <p data-en="Rigorous pre-trip and post-trip inspections by our certified mechanics team. Every bus is road-ready, every day." data-ar="فحوصات صارمة قبل الرحلة وبعدها من فريق الميكانيكيين المعتمدين لدينا. كل حافلة جاهزة للطريق كل يوم.">Rigorous pre-trip and post-trip inspections by our certified mechanics team. Every bus is road-ready, every day.</p>
+            <ul class="ss-features">
+              <li><i class="fas fa-check"></i> <span data-en="Daily safety inspections" data-ar="فحوصات سلامة يومية">Daily safety inspections</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Certified mechanics" data-ar="ميكانيكيون معتمدون">Certified mechanics</span></li>
+              <li><i class="fas fa-check"></i> <span data-en="Full RTA compliance" data-ar="امتثال كامل هيئة الطرق">Full RTA compliance</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY RBT / SAFETY ===== -->
+  <section class="section why-section" id="safety">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-visual" data-aos="fade-right">
+          <div class="why-visual-card why-card-1">
+            <i class="fas fa-location-dot"></i>
+            <div><strong data-en="Live GPS Tracking" data-ar="تتبع GPS مباشر">Live GPS Tracking</strong><span data-en="Know exactly where your child is" data-ar="اعرف أين طفلك لحظياً">Know exactly where your child is</span></div>
+          </div>
+          <div class="why-visual-card why-card-2">
+            <i class="fas fa-user-shield"></i>
+            <div><strong data-en="Background-Checked Drivers" data-ar="سائقون خضعوا للفحص الأمني">Background-Checked Drivers</strong><span data-en="Every driver vetted & certified" data-ar="كل سائق تم فحصه وتأهيله">Every driver vetted & certified</span></div>
+          </div>
+          <div class="why-visual-card why-card-3">
+            <i class="fas fa-bell"></i>
+            <div><strong data-en="Instant Parent Alerts" data-ar="تنبيهات فورية لأولياء الأمور">Instant Parent Alerts</strong><span data-en="SMS on pick-up & drop-off" data-ar="رسائل نصية عند الصعود والنزول">SMS on pick-up & drop-off</span></div>
+          </div>
+          <div class="why-center-badge"><i class="fas fa-star"></i><span data-en="Trusted Since 2009" data-ar="موثوق منذ 2009">Trusted Since 2009</span></div>
+        </div>
+        <div class="why-content" data-aos="fade-left">
+          <span class="section-tag" data-en="Why Choose RBT" data-ar="لماذا تختار RBT">Why Choose RBT</span>
+          <h2 class="section-title" data-en="Safety Isn't a Feature. It's Our Foundation." data-ar="الأمان ليس ميزة إضافية. إنه أساسنا.">Safety Isn't a Feature. It's Our Foundation.</h2>
+          <p data-en="Since April 2009, Regal Bus Transport has operated 81 RTA-compliant buses (77 active) with professional drivers and trained attendants who know every student by name." data-ar="منذ أبريل 2009، تُشغّل ريجال للنقل 81 حافلة معتمدة من هيئة الطرق (77 نشطة) مع سائقين محترفين ومرافقين مدرّبين يعرفون كل طالب بالاسم.">Since April 2009, Regal Bus Transport has operated 81 RTA-compliant buses (77 active) with professional drivers and trained attendants who know every student by name.</p>
+          <div class="why-pillars">
+            <div class="pillar"><div class="pillar-icon"><i class="fas fa-certificate"></i></div><div><h4 data-en="RTA Certified & Compliant" data-ar="معتمد ومتوافق مع هيئة الطرق">RTA Certified & Compliant</h4><p data-en="All buses meet Dubai's Roads and Transport Authority standards." data-ar="جميع الحافلات تستوفي معايير هيئة الطرق والمواصلات في دبي.">All buses meet Dubai's Roads and Transport Authority standards.</p></div></div>
+            <div class="pillar"><div class="pillar-icon"><i class="fas fa-graduation-cap"></i></div><div><h4 data-en="Trained Professionals" data-ar="محترفون مدرّبون">Trained Professionals</h4><p data-en="Drivers certified in safe driving, student management and emergency response." data-ar="سائقون معتمدون في القيادة الآمنة وإدارة الطلاب والاستجابة للطوارئ.">Drivers certified in safe driving, student management and emergency response.</p></div></div>
+            <div class="pillar"><div class="pillar-icon"><i class="fas fa-heart"></i></div><div><h4 data-en="Children Are Our Priority" data-ar="أطفالنا أولويتنا">Children Are Our Priority</h4><p data-en="Every decision centres on student safety, comfort and well-being." data-ar="كل قرار يتمحور حول سلامة الطلاب وراحتهم ورفاهيتهم.">Every decision centres on student safety, comfort and well-being.</p></div></div>
+          </div>
+          <a href="booking.html" class="btn btn-primary"><i class="fas fa-bus"></i> <span data-en="Start Your Journey With Us" data-ar="ابدأ رحلتك معنا">Start Your Journey With Us</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ANALYTICS & PERFORMANCE DASHBOARD ===== -->
+  <section class="section analytics-section" id="analytics">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag" data-en="Data & Performance" data-ar="البيانات والأداء">Data & Performance</span>
+        <h2 class="section-title" data-en="Precision, Trust & Operational Excellence" data-ar="الدقة والثقة والتميز التشغيلي">Precision, Trust & Operational Excellence</h2>
+        <p class="section-subtitle" data-en="We don't just promise safety — we measure it. Here's a transparent look at how we perform." data-ar="نحن لا نعد بالسلامة فحسب — نحن نقيسها. إليك نظرة شفافة على أدائنا.">We don't just promise safety — we measure it. Here's a transparent look at how we perform.</p>
+      </div>
+
+      <!-- KPI Cards Row -->
+      <div class="kpi-row" data-aos="fade-up">
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-icon"><i class="fas fa-clock"></i></div>
+          <div class="kpi-value" id="kpi-ontime">97%</div>
+          <div class="kpi-label" data-en="On-Time Arrival Rate" data-ar="معدل الوصول في الوقت المحدد">On-Time Arrival Rate</div>
+          <div class="kpi-trend up"><i class="fas fa-arrow-trend-up"></i> <span data-en="+2.1% vs last year" data-ar="+2.1% مقارنة بالعام الماضي">+2.1% vs last year</span></div>
+        </div>
+        <div class="kpi-card kpi-green">
+          <div class="kpi-icon"><i class="fas fa-shield-halved"></i></div>
+          <div class="kpi-value">100%</div>
+          <div class="kpi-label" data-en="RTA Safety Compliance" data-ar="الامتثال لمعايير السلامة">RTA Safety Compliance</div>
+          <div class="kpi-trend up"><i class="fas fa-certificate"></i> <span data-en="Certified & Maintained" data-ar="معتمد ومُحافَظ عليه">Certified & Maintained</span></div>
+        </div>
+        <div class="kpi-card kpi-gold">
+          <div class="kpi-icon"><i class="fas fa-star"></i></div>
+          <div class="kpi-value">4.9<small>/5</small></div>
+          <div class="kpi-label" data-en="Parent Satisfaction Score" data-ar="درجة رضا أولياء الأمور">Parent Satisfaction Score</div>
+          <div class="kpi-trend up"><i class="fas fa-arrow-trend-up"></i> <span data-en="Based on 500+ reviews" data-ar="بناءً على +500 تقييم">Based on 500+ reviews</span></div>
+        </div>
+        <div class="kpi-card kpi-cyan">
+          <div class="kpi-icon"><i class="fas fa-route"></i></div>
+          <div class="kpi-value">50+</div>
+          <div class="kpi-label" data-en="Routes: Dubai · Sharjah · Ajman" data-ar="مسارات: دبي والشارقة وعجمان">Routes: Dubai · Sharjah · Ajman</div>
+          <div class="kpi-trend up"><i class="fas fa-map-location-dot"></i> <span data-en="3-Emirate coverage" data-ar="تغطية 3 إمارات">3-Emirate coverage</span></div>
+        </div>
+      </div>
+
+      <!-- Charts Grid -->
+      <div class="charts-grid" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Chart 1: Monthly On-Time Performance -->
+        <div class="chart-card chart-wide">
+          <div class="chart-header">
+            <div>
+              <h4 data-en="Monthly On-Time Performance" data-ar="الأداء الشهري في الالتزام بالمواعيد">Monthly On-Time Performance</h4>
+              <p data-en="Percentage of trips arriving within the scheduled window — Academic Year 2024–25" data-ar="نسبة الرحلات الواصلة في الوقت المحدد — العام الدراسي 2024-25">Percentage of trips arriving within the scheduled window — Academic Year 2024–25</p>
+            </div>
+            <span class="chart-badge badge-green" data-en="✓ Excellent" data-ar="✓ ممتاز">✓ Excellent</span>
+          </div>
+          <div style="height:280px;"><canvas id="chartOnTime"></canvas></div>
+        </div>
+
+        <!-- Chart 2: Safety Incidents (Donut) -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div>
+              <h4 data-en="Safety Record 2024" data-ar="سجل السلامة 2024">Safety Record 2024</h4>
+              <p data-en="Fleet safety performance breakdown" data-ar="تفصيل أداء سلامة الأسطول">Fleet safety performance breakdown</p>
+            </div>
+            <span class="chart-badge badge-blue" data-en="Zero Incidents" data-ar="صفر حوادث">Zero Incidents</span>
+          </div>
+          <div style="height:240px;position:relative;"><canvas id="chartSafety"></canvas></div>
+          <div class="donut-legend">
+            <div class="dl-item"><span class="dl-dot" style="background:#1E9BD7"></span><span data-en="Trips Completed Safely" data-ar="رحلات اكتملت بأمان">Trips Completed Safely</span></div>
+            <div class="dl-item"><span class="dl-dot" style="background:#F5A623"></span><span data-en="Minor Delays (weather/traffic)" data-ar="تأخيرات طفيفة (طقس/مرور)">Minor Delays (weather/traffic)</span></div>
+            <div class="dl-item"><span class="dl-dot" style="background:#E2E8F0"></span><span data-en="No Safety Incidents" data-ar="لا حوادث أمان">No Safety Incidents</span></div>
+          </div>
+        </div>
+
+        <!-- Chart 3: Fleet Compliance Radar -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div>
+              <h4 data-en="Fleet Compliance Score" data-ar="درجة امتثال الأسطول">Fleet Compliance Score</h4>
+              <p data-en="Multi-dimensional RTA compliance assessment" data-ar="تقييم الامتثال متعدد الأبعاد لهيئة الطرق">Multi-dimensional RTA compliance assessment</p>
+            </div>
+            <span class="chart-badge badge-gold" data-en="RTA Certified" data-ar="معتمد">RTA Certified</span>
+          </div>
+          <div style="height:260px;"><canvas id="chartRadar"></canvas></div>
+        </div>
+
+        <!-- Chart 4: Students Growth Bar -->
+        <div class="chart-card chart-wide">
+          <div class="chart-header">
+            <div>
+              <h4 data-en="Student Growth Over the Years" data-ar="نمو عدد الطلاب على مر السنين">Student Growth Over the Years</h4>
+              <p data-en="Annual student ridership showing consistent growth in trust and demand" data-ar="عدد الطلاب السنوي يُظهر نمواً متسقاً في الثقة والطلب">Annual student ridership showing consistent growth in trust and demand</p>
+            </div>
+            <span class="chart-badge badge-cyan" data-en="↑ Growing" data-ar="↑ نامٍ">↑ Growing</span>
+          </div>
+          <div style="height:260px;"><canvas id="chartGrowth"></canvas></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DUBAI COVERAGE MAP ===== -->
+  <section class="section coverage-section" id="coverage">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag" data-en="Service Coverage" data-ar="نطاق الخدمة">Service Coverage</span>
+        <h2 class="section-title" data-en="Dubai · Sharjah · Ajman Transport Network" data-ar="شبكة نقل دبي · الشارقة · عجمان">Dubai · Sharjah · Ajman Transport Network</h2>
+        <p class="section-subtitle" data-en="77 optimised routes spanning key residential and school zones across Dubai, Sharjah and Ajman." data-ar="77 مساراً مُحسَّناً يغطي المناطق السكنية الرئيسية والمدارس في دبي والشارقة وعجمان.">77 optimised routes spanning key residential and school zones across Dubai, Sharjah and Ajman.</p>
+      </div>
+
+      <!-- Emirate route stats bar -->
+      <div class="emirate-stats-bar" data-aos="fade-up">
+        <div class="emirate-stat emirate-stat-dubai">
+          <div class="es-num">56</div>
+          <div class="es-info">
+            <strong data-en="Routes" data-ar="مسار">Routes</strong>
+            <p data-en="Dubai · 12 key districts" data-ar="دبي · 12 منطقة">Dubai · 12 key districts</p>
+          </div>
+        </div>
+        <div class="emirate-stat-divider"></div>
+        <div class="emirate-stat emirate-stat-sharjah">
+          <div class="es-num es-num-shj">18</div>
+          <div class="es-info">
+            <strong data-en="Routes" data-ar="مسار">Routes</strong>
+            <p data-en="Sharjah · 9 districts" data-ar="الشارقة · 9 أحياء">Sharjah · 9 districts</p>
+          </div>
+        </div>
+        <div class="emirate-stat-divider"></div>
+        <div class="emirate-stat emirate-stat-ajman">
+          <div class="es-num es-num-ajm">3</div>
+          <div class="es-info">
+            <strong data-en="Routes" data-ar="مسار">Routes</strong>
+            <p data-en="Ajman · 6 districts" data-ar="عجمان · 6 أحياء">Ajman · 6 districts</p>
+          </div>
+        </div>
+        <div class="emirate-stat-divider"></div>
+        <div class="emirate-stat emirate-stat-total">
+          <div class="es-num es-num-total">77</div>
+          <div class="es-info">
+            <strong data-en="Total Routes" data-ar="إجمالي المسارات">Total Routes</strong>
+            <p data-en="3 Emirates · 27+ districts" data-ar="3 إمارات · 27+ حياً">3 Emirates · 27+ districts</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full-width map -->
+      <div class="map-container map-fullwidth" data-aos="fade-up">
+          <div class="map-header">
+            <div class="map-header-left">
+              <span class="map-live-dot"></span>
+              <i class="fas fa-map-location-dot"></i>
+              <span data-en="Live Coverage Map · Dubai · Sharjah · Ajman" data-ar="خريطة التغطية المباشرة · دبي · الشارقة · عجمان">Live Coverage Map · Dubai · Sharjah · Ajman</span>
+            </div>
+            <div class="map-header-badges">
+              <span class="mh-badge mh-dxb">DXB</span>
+              <span class="mh-badge mh-shj">SHJ</span>
+              <span class="mh-badge mh-ajm">AJM</span>
+            </div>
+          </div>
+          <!-- SVG-based tri-emirate route map -->
+          <div class="dubai-map-wrap">
+            <svg viewBox="0 0 1200 640" class="dubai-svg-map" id="dubai-map">
+              <!-- ═══ DEFS ═══ -->
+              <defs>
+                <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(22,165,227,0.22)"/>
+                  <stop offset="100%" stop-color="rgba(10,46,110,0.04)"/>
+                </linearGradient>
+                <linearGradient id="dubaiGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="rgba(18,89,181,0.10)"/>
+                  <stop offset="100%" stop-color="rgba(18,89,181,0.03)"/>
+                </linearGradient>
+                <linearGradient id="sharjahGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="rgba(22,165,227,0.12)"/>
+                  <stop offset="100%" stop-color="rgba(22,165,227,0.03)"/>
+                </linearGradient>
+                <linearGradient id="ajmanGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="rgba(245,166,35,0.14)"/>
+                  <stop offset="100%" stop-color="rgba(245,166,35,0.03)"/>
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+                  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <filter id="glow-gold">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+
+              <!-- Background -->
+              <rect width="1200" height="640" fill="#0D1B2E" rx="16"/>
+
+              <!-- ═══ EMIRATE BACKGROUND FILLS ═══ -->
+              <!-- Dubai: large left region -->
+              <path d="M55 620 L55 210 Q120 185 240 165 Q380 148 520 140 Q650 133 760 130 Q820 128 875 132 L875 445 Q790 468 680 488 Q540 510 390 522 Q220 532 55 620Z"
+                    fill="url(#dubaiGrad)" stroke="rgba(18,89,181,0.22)" stroke-width="1.5" stroke-dasharray="8,5"/>
+
+              <!-- Sharjah: middle-right region -->
+              <path d="M875 132 Q940 118 1010 106 Q1080 96 1150 90 L1150 400 Q1095 415 1030 432 Q965 448 905 460 Q875 465 875 445 Z"
+                    fill="url(#sharjahGrad)" stroke="rgba(22,165,227,0.28)" stroke-width="1.5" stroke-dasharray="8,5"/>
+
+              <!-- Ajman: top-right region -->
+              <path d="M1010 106 Q1065 96 1120 90 L1150 90 L1150 230 Q1110 238 1068 248 Q1040 255 1012 262 Q990 268 1010 106Z"
+                    fill="url(#ajmanGrad)" stroke="rgba(245,166,35,0.32)" stroke-width="1.5" stroke-dasharray="7,4"/>
+
+              <!-- ═══ ARABIAN GULF ═══ -->
+              <path d="M55 210 Q180 168 350 138 Q510 110 680 102 Q840 96 960 98 Q1060 100 1150 90 L1150 0 L55 0 Z"
+                    fill="url(#seaGrad)"/>
+              <text x="440" y="58" text-anchor="middle" fill="rgba(22,165,227,0.45)" font-size="11.5" font-family="Inter,sans-serif" font-style="italic" letter-spacing="4">Arabian Gulf  ·  الخليج العربي</text>
+
+              <!-- ═══ EMIRATE BACKGROUND LABELS ═══ -->
+              <text x="390" y="595" text-anchor="middle" fill="rgba(255,255,255,0.07)" font-size="40" font-family="Inter,sans-serif" font-weight="900" letter-spacing="8">DUBAI</text>
+              <text x="1005" y="450" text-anchor="middle" fill="rgba(255,255,255,0.07)" font-size="22" font-family="Inter,sans-serif" font-weight="900" letter-spacing="3">SHARJAH</text>
+              <text x="1100" y="195" text-anchor="middle" fill="rgba(255,255,255,0.07)" font-size="14" font-family="Inter,sans-serif" font-weight="900" letter-spacing="2">AJMAN</text>
+
+              <!-- ═══ EMIRATE BOUNDARY LINES ═══ -->
+              <!-- Dubai / Sharjah border -->
+              <line x1="875" y1="130" x2="878" y2="465" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-dasharray="10,6"/>
+              <!-- Sharjah / Ajman border -->
+              <line x1="1010" y1="106" x2="1012" y2="270" stroke="rgba(255,255,255,0.14)" stroke-width="1.5" stroke-dasharray="8,6"/>
+
+              <!-- ═══ MAJOR ROAD NETWORK ═══ -->
+              <!-- Sheikh Zayed Road (E11) – Dubai spine -->
+              <path d="M55 398 Q170 363 310 322 Q450 280 590 235 Q700 205 820 177 Q850 168 878 160"
+                    stroke="#1259B5" stroke-width="5" fill="none" stroke-dasharray="12,4" opacity="0.9" filter="url(#glow)"/>
+              <text x="300" y="316" fill="rgba(18,89,181,0.55)" font-size="7.5" font-family="Inter,sans-serif" transform="rotate(-8,300,316)" letter-spacing="1">Sheikh Zayed Rd (E11)</text>
+
+              <!-- Emirates Road (E311) – Dubai + Sharjah + Ajman -->
+              <path d="M55 510 Q210 482 400 448 Q570 415 730 380 Q820 355 878 340 Q940 318 1005 298 Q1070 278 1130 262 Q1160 254 1195 248"
+                    stroke="#16A5E3" stroke-width="3.5" fill="none" stroke-dasharray="9,4" opacity="0.65" filter="url(#glow)"/>
+              <text x="600" y="408" fill="rgba(22,165,227,0.5)" font-size="7" font-family="Inter,sans-serif" transform="rotate(-5,600,408)" letter-spacing="1">Emirates Road (E311)</text>
+
+              <!-- Al Ittihad Road – DXB to SHJ main artery -->
+              <path d="M735 175 Q800 165 878 156 Q942 148 1000 140 Q1055 133 1100 126 Q1140 120 1180 115"
+                    stroke="#F5A623" stroke-width="4" fill="none" stroke-dasharray="11,4" opacity="0.82" filter="url(#glow-gold)"/>
+              <text x="830" y="150" fill="rgba(245,166,35,0.6)" font-size="7.5" font-family="Inter,sans-serif" transform="rotate(-4,830,150)" letter-spacing="1">Al Ittihad Rd (E88)</text>
+
+              <!-- Al Wahda Road – DXB to SHJ secondary -->
+              <path d="M735 215 Q810 208 878 200 Q940 193 998 185 Q1060 178 1120 170 Q1160 164 1195 160"
+                    stroke="#16A5E3" stroke-width="2.5" fill="none" stroke-dasharray="7,5" opacity="0.5"/>
+
+              <!-- Sharjah–Ajman connector road -->
+              <path d="M988 138 Q1010 130 1038 122 Q1075 112 1115 104 Q1150 97 1185 93"
+                    stroke="#F5A623" stroke-width="2.5" fill="none" stroke-dasharray="7,4" opacity="0.65"/>
+              <text x="1080" y="108" fill="rgba(245,166,35,0.5)" font-size="7" font-family="Inter,sans-serif" transform="rotate(-3,1080,108)">SHJ–AJM Rd</text>
+
+              <!-- Al Khail Road – Dubai inner -->
+              <path d="M80 370 Q240 354 390 322 Q508 295 615 265"
+                    stroke="#16A5E3" stroke-width="2" fill="none" stroke-dasharray="5,6" opacity="0.38"/>
+
+              <!-- Dubai cross-streets -->
+              <line x1="280" y1="205" x2="300" y2="510" stroke="#1259B5" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.28"/>
+              <line x1="470" y1="185" x2="482" y2="480" stroke="#1259B5" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.28"/>
+              <line x1="630" y1="165" x2="640" y2="430" stroke="#1259B5" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.28"/>
+
+              <!-- ═══ DUBAI DISTRICTS ═══ -->
+              <!-- Deira -->
+              <circle cx="745" cy="178" r="40" fill="rgba(22,165,227,0.17)" stroke="#16A5E3" stroke-width="2"/>
+              <text x="745" y="172" text-anchor="middle" fill="#fff" font-size="10.5" font-family="Inter,sans-serif" font-weight="700">Deira</text>
+              <text x="745" y="185" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="8.5">ديرة</text>
+
+              <!-- Downtown / Bur Dubai -->
+              <circle cx="600" cy="228" r="40" fill="rgba(22,165,227,0.15)" stroke="#16A5E3" stroke-width="2"/>
+              <text x="600" y="222" text-anchor="middle" fill="#fff" font-size="10" font-family="Inter,sans-serif" font-weight="700">Downtown</text>
+              <text x="600" y="235" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="8.5">وسط المدينة</text>
+
+              <!-- Jumeirah -->
+              <circle cx="455" cy="282" r="36" fill="rgba(245,166,35,0.14)" stroke="#F5A623" stroke-width="2"/>
+              <text x="455" y="276" text-anchor="middle" fill="#fff" font-size="10.5" font-family="Inter,sans-serif" font-weight="700">Jumeirah</text>
+              <text x="455" y="289" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="8.5">جميرا</text>
+
+              <!-- Al Barsha -->
+              <circle cx="305" cy="336" r="38" fill="rgba(22,165,227,0.15)" stroke="#16A5E3" stroke-width="2"/>
+              <text x="305" y="330" text-anchor="middle" fill="#fff" font-size="10.5" font-family="Inter,sans-serif" font-weight="700">Al Barsha</text>
+              <text x="305" y="343" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="8.5">البرشاء</text>
+
+              <!-- Mirdif -->
+              <circle cx="700" cy="308" r="34" fill="rgba(22,165,227,0.13)" stroke="#16A5E3" stroke-width="1.5"/>
+              <text x="700" y="302" text-anchor="middle" fill="#fff" font-size="10.5" font-family="Inter,sans-serif" font-weight="700">Mirdif</text>
+              <text x="700" y="315" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="8.5">مردف</text>
+
+              <!-- Al Qusais -->
+              <circle cx="618" cy="358" r="30" fill="rgba(22,165,227,0.11)" stroke="#16A5E3" stroke-width="1.5"/>
+              <text x="618" y="353" text-anchor="middle" fill="#fff" font-size="9.5" font-family="Inter,sans-serif" font-weight="600">Al Qusais</text>
+              <text x="618" y="366" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8">القصيص</text>
+
+              <!-- Karama -->
+              <circle cx="528" cy="385" r="28" fill="rgba(245,166,35,0.11)" stroke="#F5A623" stroke-width="1.5"/>
+              <text x="528" y="380" text-anchor="middle" fill="#fff" font-size="9.5" font-family="Inter,sans-serif" font-weight="600">Karama</text>
+              <text x="528" y="393" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8">الكرامة</text>
+
+              <!-- Discovery Gardens -->
+              <circle cx="162" cy="385" r="34" fill="rgba(22,165,227,0.12)" stroke="#16A5E3" stroke-width="1.5"/>
+              <text x="162" y="377" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">Discovery</text>
+              <text x="162" y="389" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">Gardens</text>
+              <text x="162" y="400" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7.5">الحدائق</text>
+
+              <!-- Al Warqa -->
+              <circle cx="790" cy="388" r="29" fill="rgba(22,165,227,0.11)" stroke="#16A5E3" stroke-width="1.5"/>
+              <text x="790" y="383" text-anchor="middle" fill="#fff" font-size="9.5" font-family="Inter,sans-serif" font-weight="600">Al Warqa</text>
+              <text x="790" y="396" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8">الورقاء</text>
+
+              <!-- Muhaisnah -->
+              <circle cx="675" cy="448" r="26" fill="rgba(22,165,227,0.10)" stroke="#16A5E3" stroke-width="1"/>
+              <text x="675" y="444" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">Muhaisnah</text>
+              <text x="675" y="456" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7.5">مهيسنة</text>
+
+              <!-- Al Nahda DXB -->
+              <circle cx="525" cy="472" r="26" fill="rgba(22,165,227,0.10)" stroke="#16A5E3" stroke-width="1"/>
+              <text x="525" y="468" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">Al Nahda</text>
+              <text x="525" y="480" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7.5">النهدة - دبي</text>
+
+              <!-- Hor Al Anz -->
+              <circle cx="760" cy="250" r="26" fill="rgba(22,165,227,0.10)" stroke="#16A5E3" stroke-width="1"/>
+              <text x="760" y="245" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif" font-weight="600">Hor Al Anz</text>
+              <text x="760" y="257" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7.5">هور العنز</text>
+
+              <!-- ═══ SHARJAH DISTRICTS (9 areas) ═══ -->
+              <!-- Sharjah City / Al Majaz – primary hub -->
+              <circle cx="938" cy="195" r="48" fill="rgba(22,165,227,0.20)" stroke="#16A5E3" stroke-width="2.5"/>
+              <text x="938" y="186" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter,sans-serif" font-weight="800">Sharjah</text>
+              <text x="938" y="199" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="9.5">الشارقة</text>
+              <text x="938" y="212" text-anchor="middle" fill="rgba(22,165,227,0.9)" font-size="8.5" font-weight="600">Al Majaz · المجاز</text>
+
+              <!-- Al Nahda Sharjah -->
+              <circle cx="890" cy="298" r="30" fill="rgba(22,165,227,0.14)" stroke="#16A5E3" stroke-width="1.5"/>
+              <text x="890" y="292" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">Al Nahda SHJ</text>
+              <text x="890" y="305" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="7.5">النهدة</text>
+
+              <!-- Al Taawun -->
+              <circle cx="988" cy="268" r="28" fill="rgba(22,165,227,0.12)" stroke="#16A5E3" stroke-width="1.5"/>
+              <text x="988" y="262" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">Al Taawun</text>
+              <text x="988" y="275" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7.5">التعاون</text>
+
+              <!-- Al Qasimia -->
+              <circle cx="1005" cy="338" r="27" fill="rgba(22,165,227,0.11)" stroke="#16A5E3" stroke-width="1.5"/>
+              <text x="1005" y="332" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">Al Qasimia</text>
+              <text x="1005" y="345" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7.5">القاسمية</text>
+
+              <!-- Muwaileh -->
+              <circle cx="900" cy="378" r="27" fill="rgba(22,165,227,0.11)" stroke="#16A5E3" stroke-width="1.5"/>
+              <text x="900" y="372" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">Muwaileh</text>
+              <text x="900" y="385" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7.5">مويلح</text>
+
+              <!-- Al Khan -->
+              <circle cx="962" cy="155" r="22" fill="rgba(22,165,227,0.11)" stroke="#16A5E3" stroke-width="1"/>
+              <text x="962" y="150" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif" font-weight="600">Al Khan</text>
+              <text x="962" y="162" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7">الخان</text>
+
+              <!-- Al Butina -->
+              <circle cx="895" cy="152" r="20" fill="rgba(22,165,227,0.10)" stroke="#16A5E3" stroke-width="1"/>
+              <text x="895" y="147" text-anchor="middle" fill="#fff" font-size="8" font-family="Inter,sans-serif" font-weight="600">Al Butina</text>
+              <text x="895" y="159" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7">البطينة</text>
+
+              <!-- Rolla / Al Yarmook -->
+              <circle cx="1058" cy="398" r="24" fill="rgba(22,165,227,0.10)" stroke="#16A5E3" stroke-width="1"/>
+              <text x="1058" y="393" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif" font-weight="600">Rolla</text>
+              <text x="1058" y="405" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7">الرولة</text>
+
+              <!-- Halwan -->
+              <circle cx="1078" cy="320" r="22" fill="rgba(22,165,227,0.10)" stroke="#16A5E3" stroke-width="1"/>
+              <text x="1078" y="315" text-anchor="middle" fill="#fff" font-size="8" font-family="Inter,sans-serif" font-weight="600">Halwan</text>
+              <text x="1078" y="327" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7">حلوان</text>
+
+              <!-- ═══ AJMAN DISTRICTS (6 areas) ═══ -->
+              <!-- Ajman City – primary hub -->
+              <circle cx="1095" cy="152" r="42" fill="rgba(245,166,35,0.22)" stroke="#F5A623" stroke-width="2.5" filter="url(#glow-gold)"/>
+              <text x="1095" y="143" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter,sans-serif" font-weight="800">Ajman</text>
+              <text x="1095" y="157" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="9.5">عجمان</text>
+              <text x="1095" y="170" text-anchor="middle" fill="rgba(245,166,35,0.95)" font-size="8.5" font-weight="600">City Centre · المركز</text>
+
+              <!-- Al Rashidiya Ajman -->
+              <circle cx="1058" cy="225" r="26" fill="rgba(245,166,35,0.14)" stroke="#F5A623" stroke-width="1.5"/>
+              <text x="1058" y="219" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">Al Rashidiya</text>
+              <text x="1058" y="232" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="7.5">الراشدية</text>
+
+              <!-- Al Nuaimia -->
+              <circle cx="1140" cy="218" r="24" fill="rgba(245,166,35,0.13)" stroke="#F5A623" stroke-width="1.5"/>
+              <text x="1140" y="212" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">Al Nuaimia</text>
+              <text x="1140" y="225" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="7.5">النعيمية</text>
+
+              <!-- Al Rumailah -->
+              <circle cx="1118" cy="275" r="23" fill="rgba(245,166,35,0.12)" stroke="#F5A623" stroke-width="1"/>
+              <text x="1118" y="270" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif" font-weight="600">Al Rumailah</text>
+              <text x="1118" y="282" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7">الرميلة</text>
+
+              <!-- Al Jurf -->
+              <circle cx="1155" cy="320" r="22" fill="rgba(245,166,35,0.11)" stroke="#F5A623" stroke-width="1"/>
+              <text x="1155" y="315" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif" font-weight="600">Al Jurf</text>
+              <text x="1155" y="327" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7">الجرف</text>
+
+              <!-- Al Hamidiyah -->
+              <circle cx="1168" cy="375" r="21" fill="rgba(245,166,35,0.10)" stroke="#F5A623" stroke-width="1"/>
+              <text x="1168" y="370" text-anchor="middle" fill="#fff" font-size="8" font-family="Inter,sans-serif" font-weight="600">Al Hamidiyah</text>
+              <text x="1168" y="382" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="7">الحميدية</text>
+
+              <!-- ═══ BUS ROUTE STOP DOTS ═══ -->
+              <g id="bus-dots">
+                <!-- Dubai stops -->
+                <circle cx="745" cy="178" r="5" fill="#16A5E3" class="pulse-dot"/>
+                <circle cx="600" cy="228" r="5" fill="#16A5E3" class="pulse-dot"/>
+                <circle cx="455" cy="282" r="5" fill="#F5A623" class="pulse-dot"/>
+                <circle cx="305" cy="336" r="5" fill="#16A5E3" class="pulse-dot"/>
+                <circle cx="700" cy="308" r="4.5" fill="#16A5E3" class="pulse-dot" style="animation-delay:0.3s"/>
+                <circle cx="162" cy="385" r="4.5" fill="#16A5E3" class="pulse-dot" style="animation-delay:0.2s"/>
+                <circle cx="618" cy="358" r="4" fill="#16A5E3" class="pulse-dot" style="animation-delay:0.5s"/>
+                <circle cx="528" cy="385" r="4" fill="#F5A623" class="pulse-dot" style="animation-delay:0.7s"/>
+                <circle cx="790" cy="388" r="4" fill="#16A5E3" class="pulse-dot" style="animation-delay:0.4s"/>
+                <circle cx="760" cy="250" r="4" fill="#16A5E3" class="pulse-dot" style="animation-delay:0.6s"/>
+                <!-- Sharjah stops -->
+                <circle cx="938" cy="195" r="6.5" fill="#16A5E3" class="pulse-dot" style="animation-delay:0.5s"/>
+                <circle cx="890" cy="298" r="5" fill="#16A5E3" class="pulse-dot" style="animation-delay:0.9s"/>
+                <circle cx="988" cy="268" r="4.5" fill="#16A5E3" class="pulse-dot" style="animation-delay:1.1s"/>
+                <circle cx="1005" cy="338" r="4" fill="#16A5E3" class="pulse-dot" style="animation-delay:1.4s"/>
+                <circle cx="900" cy="378" r="4" fill="#16A5E3" class="pulse-dot" style="animation-delay:0.7s"/>
+                <circle cx="962" cy="155" r="3.5" fill="#16A5E3" class="pulse-dot" style="animation-delay:1.6s"/>
+                <circle cx="895" cy="152" r="3.5" fill="#16A5E3" class="pulse-dot" style="animation-delay:1.8s"/>
+                <circle cx="1058" cy="398" r="3.5" fill="#16A5E3" class="pulse-dot" style="animation-delay:2.0s"/>
+                <circle cx="1078" cy="320" r="3.5" fill="#16A5E3" class="pulse-dot" style="animation-delay:1.3s"/>
+                <!-- Ajman stops -->
+                <circle cx="1095" cy="152" r="7" fill="#F5A623" class="pulse-dot" style="animation-delay:1.0s"/>
+                <circle cx="1058" cy="225" r="5" fill="#F5A623" class="pulse-dot" style="animation-delay:1.7s"/>
+                <circle cx="1140" cy="218" r="4.5" fill="#F5A623" class="pulse-dot" style="animation-delay:2.1s"/>
+                <circle cx="1118" cy="275" r="4" fill="#F5A623" class="pulse-dot" style="animation-delay:1.9s"/>
+                <circle cx="1155" cy="320" r="4" fill="#F5A623" class="pulse-dot" style="animation-delay:2.3s"/>
+                <circle cx="1168" cy="375" r="3.5" fill="#F5A623" class="pulse-dot" style="animation-delay:2.5s"/>
+              </g>
+
+              <!-- ═══ BORDER CROSSING BADGES ═══ -->
+              <g transform="translate(878,152)">
+                <rect x="-22" y="-12" width="44" height="24" rx="5" fill="rgba(255,255,255,0.13)" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+                <text x="0" y="5" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8" font-family="Inter,sans-serif" font-weight="600">DXB ↔ SHJ</text>
+              </g>
+              <g transform="translate(1012,108)">
+                <rect x="-22" y="-12" width="44" height="24" rx="5" fill="rgba(245,166,35,0.15)" stroke="rgba(245,166,35,0.5)" stroke-width="1.2"/>
+                <text x="0" y="5" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8" font-family="Inter,sans-serif" font-weight="600">SHJ ↔ AJM</text>
+              </g>
+
+              <!-- ═══ ANIMATED BUS ═══ -->
+              <g id="animated-bus" transform="translate(80,392)">
+                <rect x="-14" y="-10" width="28" height="20" rx="4" fill="#1E9BD7"/>
+                <rect x="-12" y="-8" width="10" height="8" rx="1.5" fill="rgba(255,255,255,0.8)"/>
+                <rect x="2" y="-8" width="10" height="8" rx="1.5" fill="rgba(255,255,255,0.8)"/>
+                <circle cx="-8" cy="10" r="4" fill="#0A2E6E"/>
+                <circle cx="8" cy="10" r="4" fill="#0A2E6E"/>
+                <text x="0" y="2" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-size="6.5" font-family="Inter,sans-serif" font-weight="800">RBT</text>
+              </g>
+
+              <!-- ═══ LEGEND ═══ -->
+              <g transform="translate(28,535)">
+                <rect x="0" y="0" width="310" height="86" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                <text x="12" y="16" fill="rgba(255,255,255,0.6)" font-size="8.5" font-family="Inter,sans-serif" font-weight="700" letter-spacing="1">LEGEND</text>
+                <circle cx="16" cy="32" r="5.5" fill="#16A5E3"/>
+                <text x="28" y="36" fill="rgba(255,255,255,0.82)" font-size="9" font-family="Inter,sans-serif">Dubai Active Zone / منطقة دبي</text>
+                <circle cx="16" cy="50" r="5.5" fill="#F5A623"/>
+                <text x="28" y="54" fill="rgba(255,255,255,0.82)" font-size="9" font-family="Inter,sans-serif">Sharjah / Ajman Zone · الشارقة / عجمان</text>
+                <line x1="8" y1="68" x2="26" y2="68" stroke="#F5A623" stroke-width="2.5" stroke-dasharray="7,3"/>
+                <text x="32" y="72" fill="rgba(255,255,255,0.82)" font-size="9" font-family="Inter,sans-serif">Al Ittihad Road (E88) DXB↔SHJ</text>
+              </g>
+
+              <!-- Second legend column -->
+              <g transform="translate(352,553)">
+                <line x1="0" y1="0" x2="18" y2="0" stroke="#1259B5" stroke-width="2.5" stroke-dasharray="7,3"/>
+                <text x="24" y="4" fill="rgba(255,255,255,0.82)" font-size="9" font-family="Inter,sans-serif">Sheikh Zayed / Emirates Rd</text>
+                <line x1="0" y1="18" x2="18" y2="18" stroke="#16A5E3" stroke-width="2" stroke-dasharray="5,4"/>
+                <text x="24" y="22" fill="rgba(255,255,255,0.82)" font-size="9" font-family="Inter,sans-serif">Emirates Road (E311)</text>
+              </g>
+
+              <!-- ═══ FOOTER WATERMARK ═══ -->
+              <text x="614" y="626" text-anchor="middle" fill="rgba(255,255,255,0.18)" font-size="9.5" font-family="Inter,sans-serif" letter-spacing="1">Dubai · Sharjah · Ajman – RBT Tri-Emirate School Transport Network 2025</text>
+            </svg>
+          </div>
+        </div>
+      </div><!-- /map-container -->
+
+      <!-- ═══ AREAS WE SERVE — Redesigned ═══ -->
+      <div class="aws-section" data-aos="fade-up">
+
+        <!-- Intro Label -->
+        <div class="aws-section-intro">
+          <span class="aws-section-tag"><i class="fas fa-map-location-dot" style="margin-right:6px;"></i>Coverage Network</span>
+          <h3 class="aws-section-title" data-en="Areas We Serve" data-ar="المناطق التي نخدمها">Areas We Serve</h3>
+          <p class="aws-section-sub">3 Emirates &nbsp;·&nbsp; 77 Active Routes &nbsp;·&nbsp; 29 Districts across Dubai, Sharjah &amp; Ajman</p>
+        </div>
+
+        <!-- Stats Banner Row -->
+        <div class="aws-stats-row">
+          <div class="aws-stat-item">
+            <div class="aws-stat-icon"><i class="fas fa-bus"></i></div>
+            <div class="aws-stat-num">81</div>
+            <div class="aws-stat-label">Buses in Fleet</div>
+          </div>
+          <div class="aws-stat-item aws-stat-gold">
+            <div class="aws-stat-icon"><i class="fas fa-route"></i></div>
+            <div class="aws-stat-num">77</div>
+            <div class="aws-stat-label">Active Routes</div>
+          </div>
+          <div class="aws-stat-item">
+            <div class="aws-stat-icon"><i class="fas fa-city"></i></div>
+            <div class="aws-stat-num">3</div>
+            <div class="aws-stat-label">Emirates Covered</div>
+          </div>
+          <div class="aws-stat-item">
+            <div class="aws-stat-icon"><i class="fas fa-map-pin"></i></div>
+            <div class="aws-stat-num">29</div>
+            <div class="aws-stat-label">Districts Served</div>
+          </div>
+          <div class="aws-stat-item">
+            <div class="aws-stat-icon"><i class="fas fa-user-graduate"></i></div>
+            <div class="aws-stat-num">2500+</div>
+            <div class="aws-stat-label">Students Daily</div>
+          </div>
+        </div>
+
+        <!-- Emirates Cards Grid -->
+        <div class="aws-cards-grid">
+
+          <!-- DUBAI Card -->
+          <div class="aws-card aws-card-dxb" id="awscard-dubai">
+            <div class="aws-card-header">
+              <div class="aws-card-header-left">
+                <div class="aws-emirate-flag aws-flag-dxb">
+                  <i class="fas fa-building" style="color:#1259B5;font-size:1.1rem;"></i>
+                </div>
+                <div class="aws-emirate-info">
+                  <div class="aws-emirate-name">Dubai <span class="aws-emirate-ar">دبي</span></div>
+                  <div class="aws-emirate-meta">
+                    <span class="aws-meta-chip aws-chip-dxb"><i class="fas fa-location-dot"></i>&nbsp;14 Areas</span>
+                    <span class="aws-meta-chip aws-chip-route"><i class="fas fa-route"></i>&nbsp;56 Routes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SHARJAH Card -->
+          <div class="aws-card aws-card-shj" id="awscard-sharjah">
+            <div class="aws-card-header">
+              <div class="aws-card-header-left">
+                <div class="aws-emirate-flag aws-flag-shj">
+                  <i class="fas fa-mosque" style="color:#16A5E3;font-size:1.1rem;"></i>
+                </div>
+                <div class="aws-emirate-info">
+                  <div class="aws-emirate-name">Sharjah <span class="aws-emirate-ar">الشارقة</span></div>
+                  <div class="aws-emirate-meta">
+                    <span class="aws-meta-chip aws-chip-shj"><i class="fas fa-location-dot"></i>&nbsp;9 Areas</span>
+                    <span class="aws-meta-chip aws-chip-route-shj"><i class="fas fa-route"></i>&nbsp;18 Routes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AJMAN Card -->
+          <div class="aws-card aws-card-ajm" id="awscard-ajman">
+            <div class="aws-card-header">
+              <div class="aws-card-header-left">
+                <div class="aws-emirate-flag aws-flag-ajm">
+                  <i class="fas fa-water" style="color:#F5A623;font-size:1.1rem;"></i>
+                </div>
+                <div class="aws-emirate-info">
+                  <div class="aws-emirate-name">Ajman <span class="aws-emirate-ar">عجمان</span></div>
+                  <div class="aws-emirate-meta">
+                    <span class="aws-meta-chip aws-chip-ajm"><i class="fas fa-location-dot"></i>&nbsp;6 Areas</span>
+                    <span class="aws-meta-chip aws-chip-route-ajm"><i class="fas fa-route"></i>&nbsp;3 Routes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /aws-cards-grid -->
+
+        <!-- CTA Row -->
+        <div class="aws-cta-row">
+          <a href="fees.html" class="aws-cta-btn">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <span data-en="View Fee Structure" data-ar="عرض هيكل الرسوم">View Fee Structure</span>
+          </a>
+          &nbsp;&nbsp;
+          <a href="booking.html" class="aws-cta-btn" style="background: linear-gradient(90deg,#0A2E6E,#1259B5) !important; box-shadow: 0 4px 20px rgba(10,46,110,0.3) !important;">
+            <i class="fas fa-user-plus"></i>
+            <span data-en="Register Your Child" data-ar="سجّل طفلك">Register Your Child</span>
+          </a>
+        </div>
+
+      </div><!-- /aws-section -->
+
+    </div>
+  </section>
+
+  <!-- ===== FLEET VISUAL SECTION ===== -->
+  <section class="section fleet-section" id="fleet">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag" data-en="Our Fleet" data-ar="أسطولنا">Our Fleet</span>
+        <h2 class="section-title" data-en="77 Active Buses. One Standard: Perfection." data-ar="77 حافلة نشطة. معيار واحد: الكمال.">77 Active Buses. One Standard: Perfection.</h2>
+        <p class="section-subtitle" data-en="Fully air-conditioned, RTA-certified, GPS-tracked and CCTV-equipped. Every bus inspected daily by our certified mechanics team." data-ar="تكييف هواء كامل، معتمدة من هيئة الطرق، مزودة بـ GPS وكاميرات CCTV. كل حافلة تُفحص يومياً من فريق ميكانيكيينا المعتمدين.">Fully air-conditioned, RTA-certified, GPS-tracked and CCTV-equipped. Every bus inspected daily by our certified mechanics team.</p>
+      </div>
+
+      <!-- Fleet image strip -->
+      <div class="fleet-image-strip" data-aos="fade-up">
+        <div class="fleet-img-card">
+          <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=1200&q=80&fit=crop" alt="School bus fleet" loading="lazy"/>
+          <div class="fleet-img-label" data-en="Fleet of 81 Buses" data-ar="أسطول 81 حافلة">Fleet of 81 Buses</div>
+        </div>
+        <div class="fleet-img-card">
+          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=80&fit=crop" alt="Fleet vehicles" loading="lazy"/>
+          <div class="fleet-img-label" data-en="Air-Conditioned Comfort" data-ar="راحة مع تكييف الهواء">Air-Conditioned Comfort</div>
+        </div>
+        <div class="fleet-img-card">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&fit=crop" alt="GPS tracking system" loading="lazy"/>
+          <div class="fleet-img-label" data-en="GPS Tracking System" data-ar="نظام تتبع GPS">GPS Tracking System</div>
+        </div>
+      </div>
+
+      <div class="fleet-features-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="fleet-feature"><div class="fleet-feat-icon"><i class="fas fa-snowflake"></i></div><h4 data-en="Air Conditioned" data-ar="تكييف هواء">Air Conditioned</h4><p data-en="Essential comfort for Dubai's climate." data-ar="راحة ضرورية لمناخ دبي.">Essential comfort for Dubai's climate.</p></div>
+        <div class="fleet-feature"><div class="fleet-feat-icon"><i class="fas fa-satellite-dish"></i></div><h4 data-en="GPS Enabled" data-ar="نظام GPS">GPS Enabled</h4><p data-en="Real-time tracking for parents and operations." data-ar="تتبع فوري لأولياء الأمور والعمليات.">Real-time tracking for parents and operations.</p></div>
+        <div class="fleet-feature"><div class="fleet-feat-icon"><i class="fas fa-camera"></i></div><h4 data-en="CCTV Equipped" data-ar="مجهّزة بكاميرات CCTV">CCTV Equipped</h4><p data-en="Security and accountability on every journey." data-ar="الأمان والمساءلة في كل رحلة.">Security and accountability on every journey.</p></div>
+        <div class="fleet-feature"><div class="fleet-feat-icon"><i class="fas fa-first-aid"></i></div><h4 data-en="First Aid Ready" data-ar="الإسعافات الأولية">First Aid Ready</h4><p data-en="Stocked kits, trained drivers." data-ar="حقائب مجهّزة وسائقون مدرّبون.">Stocked kits, trained drivers.</p></div>
+        <div class="fleet-feature"><div class="fleet-feat-icon"><i class="fas fa-door-open"></i></div><h4 data-en="Emergency Exits" data-ar="مخارج الطوارئ">Emergency Exits</h4><p data-en="Clearly marked multiple exits." data-ar="مخارج متعددة وموضّحة بوضوح.">Clearly marked multiple exits.</p></div>
+        <div class="fleet-feature"><div class="fleet-feat-icon"><i class="fas fa-wrench"></i></div><h4 data-en="Daily Inspections" data-ar="فحوصات يومية">Daily Inspections</h4><p data-en="Pre & post-trip mechanical checks." data-ar="فحوصات ميكانيكية قبل الرحلة وبعدها.">Pre & post-trip mechanical checks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCHOOLS SECTION ===== -->
+  <section class="section schools-section" id="schools">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag" data-en="Schools We Serve" data-ar="المدارس التي نخدمها">Schools We Serve</span>
+        <h2 class="section-title" data-en="Trusted by Leading Schools in Dubai" data-ar="موثوق به من قِبل المدارس الرائدة في دبي">Trusted by Leading Schools in Dubai</h2>
+      </div>
+      <div class="schools-grid">
+        <div class="school-card"><div class="school-logo-placeholder"><i class="fas fa-school"></i></div><div class="school-info"><h4>North American International School</h4><p data-en="Dubai – Comprehensive transport coverage" data-ar="دبي – تغطية نقل شاملة">Dubai – Comprehensive transport coverage</p><span class="school-badge" data-en="Active Partner" data-ar="شريك فاعل">Active Partner</span></div></div>
+        <div class="school-card"><div class="school-logo-placeholder"><i class="fas fa-school"></i></div><div class="school-info"><h4 data-en="Arab Unity School" data-ar="مدرسة الوحدة العربية">Arab Unity School</h4><p data-en="Dubai – All grades transport service" data-ar="دبي – خدمة نقل لجميع الصفوف">Dubai – All grades transport service</p><span class="school-badge" data-en="Active Partner" data-ar="شريك فاعل">Active Partner</span></div></div>
+        <div class="school-card school-card-cta"><div class="school-logo-placeholder school-add"><i class="fas fa-plus-circle"></i></div><div class="school-info"><h4 data-en="Your School?" data-ar="مدرستك؟">Your School?</h4><p data-en="Partner with us for tailored school transport solutions." data-ar="اشترك معنا لحلول نقل مدرسي مخصصة.">Partner with us for tailored school transport solutions.</p><a href="#contact" class="btn btn-outline-primary btn-sm" data-en="Partner With Us" data-ar="كن شريكنا">Partner With Us</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section howitworks-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag" data-en="Simple Process" data-ar="عملية بسيطة">Simple Process</span>
+        <h2 class="section-title" data-en="Getting Started is Easy" data-ar="البدء أمر سهل">Getting Started is Easy</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card" data-aos="fade-up" data-aos-delay="0"><div class="step-number">01</div><div class="step-icon"><i class="fas fa-file-pen"></i></div><h3 data-en="Fill the Form" data-ar="اِملأ النموذج">Fill the Form</h3><p data-en="Complete our online registration with your child's details and pickup location." data-ar="أكمل التسجيل عبر الإنترنت ببيانات طفلك وموقع الاصطحاب.">Complete our online registration with your child's details and pickup location.</p></div>
+        <div class="step-connector"></div>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="150"><div class="step-number">02</div><div class="step-icon"><i class="fas fa-headset"></i></div><h3 data-en="We Contact You" data-ar="نتواصل معك">We Contact You</h3><p data-en="Our team reviews and contacts you to confirm route and fees within 24 hrs." data-ar="فريقنا يراجع طلبك ويتواصل معك خلال 24 ساعة لتأكيد المسار والرسوم.">Our team reviews and contacts you to confirm route and fees within 24 hrs.</p></div>
+        <div class="step-connector"></div>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="300"><div class="step-number">03</div><div class="step-icon"><i class="fas fa-credit-card"></i></div><h3 data-en="Complete Payment" data-ar="أكمل الدفع">Complete Payment</h3><p data-en="Pay via cash, cheque or Skiply mobile app." data-ar="ادفع عبر النقد أو الشيك أو تطبيق Skiply.">Pay via cash, cheque or Skiply mobile app.</p></div>
+        <div class="step-connector"></div>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="450"><div class="step-number">04</div><div class="step-icon"><i class="fas fa-bus"></i></div><h3 data-en="Your Child Rides!" data-ar="طفلك ينطلق!">Your Child Rides!</h3><p data-en="Service begins with real-time SMS notifications daily." data-ar="تبدأ الخدمة مع إشعارات SMS فورية يومياً.">Service begins with real-time SMS notifications daily.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content" data-aos="fade-right">
+          <span class="section-tag" data-en="About RBT" data-ar="عن شركة RBT">About RBT</span>
+          <h2 class="section-title" data-en="Dubai's Dedicated School Transport Partner" data-ar="شريك النقل المدرسي المخصص في دبي">Dubai's Dedicated School Transport Partner</h2>
+          <p data-en="Regal Bus Transport (RBT) was established on 1st April 2009 with a singular purpose: to provide safe, reliable, and comfortable transport for school-going children in Dubai." data-ar="تأسّست شركة ريجال للنقل بالحافلات (RBT) في الأول من أبريل 2009 بهدف محدد: توفير نقل آمن وموثوق ومريح للأطفال في سن المدرسة بدبي.">Regal Bus Transport (RBT) was established on 1st April 2009 with a singular purpose: to provide safe, reliable, and comfortable transport for school-going children in Dubai.</p>
+          <p data-en="RBT has grown to operate a fleet of 81 RTA-certified buses (77 active), staffed by professional drivers and well-trained attendants. Our team excels in safety, routing, first aid, student management and public relations." data-ar="نمت RBT لتُشغّل 81 حافلة معتمدة من هيئة الطرق (77 نشطة). فريقنا متميز في السلامة والتوجيه والإسعافات الأولية وإدارة الطلاب والعلاقات العامة.">RBT has grown to operate a fleet of 81 RTA-certified buses (77 active), staffed by professional drivers and well-trained attendants. Our team excels in safety, routing, first aid, student management and public relations.</p>
+          <div class="about-values">
+            <div class="value-item"><i class="fas fa-bullseye"></i><div><h4 data-en="Our Mission" data-ar="مهمتنا">Our Mission</h4><p data-en="Safe, reliable, affordable transport for school children — fully RTA-compliant." data-ar="نقل آمن وموثوق وبأسعار معقولة للطلاب — امتثال كامل لهيئة الطرق والمواصلات.">Safe, reliable, affordable transport for school children — fully RTA-compliant.</p></div></div>
+            <div class="value-item"><i class="fas fa-eye"></i><div><h4 data-en="Our Vision" data-ar="رؤيتنا">Our Vision</h4><p data-en="Dubai's most trusted independent school transport provider, setting the benchmark for safety." data-ar="مزوّد النقل المدرسي المستقل الأكثر موثوقية في دبي.">Dubai's most trusted independent school transport provider, setting the benchmark for safety.</p></div></div>
+          </div>
+        </div>
+        <div class="about-visual" data-aos="fade-left">
+          <!-- Dubai skyline background card -->
+          <div class="about-image-card">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80&fit=crop" alt="Aerial view of Dubai city" loading="lazy"/>
+            <div class="about-img-overlay">
+              <div class="about-overlay-badge">
+                <i class="fas fa-map-marker-alt"></i>
+                <span data-en="Proudly Serving Dubai" data-ar="نفخر بخدمة دبي">Proudly Serving Dubai</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-stats-card">
+            <div class="ast-item"><i class="fas fa-calendar-days"></i><div><strong>2009</strong><span data-en="Year Established" data-ar="سنة التأسيس">Year Established</span></div></div>
+            <div class="ast-item"><i class="fas fa-bus"></i><div><strong>81</strong><span data-en="RTA-Certified Buses" data-ar="حافلة معتمدة">RTA-Certified Buses</span></div></div>
+            <div class="ast-item"><i class="fas fa-users"></i><div><strong data-en="Expert" data-ar="خبراء">Expert</strong><span data-en="Drivers & Attendants" data-ar="سائقون ومرافقون">Drivers & Attendants</span></div></div>
+            <div class="ast-item"><i class="fas fa-map-location-dot"></i><div><strong data-en="Dubai-Wide" data-ar="دبي كاملاً">Dubai-Wide</strong><span data-en="Route Coverage" data-ar="تغطية المسارات">Route Coverage</span></div></div>
+          </div>
+          <div class="about-cert-badge"><i class="fas fa-award"></i><div><strong data-en="RTA Certified Operator" data-ar="مشغّل معتمد من هيئة الطرق">RTA Certified Operator</strong><span data-en="Dubai Roads and Transport Authority" data-ar="هيئة الطرق والمواصلات في دبي">Dubai Roads and Transport Authority</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag" data-en="Parent Stories" data-ar="قصص أولياء الأمور">Parent Stories</span>
+        <h2 class="section-title" data-en="Trusted by Hundreds of Families" data-ar="موثوق به لدى مئات العائلات">Trusted by Hundreds of Families</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p data-en='"RBT has been transporting our kids for 5 years. The drivers are professional, buses always on time, and the SMS notifications give us complete peace of mind."' data-ar='"RBT تنقل أطفالنا منذ 5 سنوات. السائقون محترفون، الحافلات دائمًا في موعدها، والإشعارات تمنحنا راحة البال التامة."'>"RBT has been transporting our kids for 5 years. The drivers are professional, buses always on time, and the SMS notifications give us complete peace of mind."</p>
+          <div class="testimonial-author"><div class="author-avatar">SA</div><div><strong>Sarah Al-Mansouri</strong><span data-en="Parent – North American International School" data-ar="ولي أمر – المدرسة الدولية الأمريكية الشمالية">Parent – North American International School</span></div></div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p data-en='"The attendant on our daughter\'s bus knows all the children by name. As a working parent, that level of personal attention is invaluable."' data-ar='"المرافق على حافلة ابنتنا يعرف جميع الأطفال بأسمائهم. كوالد عامل، هذا المستوى من الاهتمام لا يقدّر بثمن."'>"The attendant on our daughter's bus knows all the children by name. As a working parent, that level of personal attention is invaluable."</p>
+          <div class="testimonial-author"><div class="author-avatar">MK</div><div><strong>Mohammed Al-Khalidi</strong><span data-en="Parent – Arab Unity School" data-ar="ولي أمر – مدرسة الوحدة العربية">Parent – Arab Unity School</span></div></div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p data-en='"Clean buses, courteous staff, and they actually answer the phone when you call. RBT is genuinely head and shoulders above any alternative."' data-ar='"حافلات نظيفة وطاقم مؤدب، ويردّون فعلاً على الهاتف. RBT تتفوق بوضوح على أي بديل آخر."'>"Clean buses, courteous staff, and they actually answer the phone when you call. RBT is genuinely head and shoulders above any alternative."</p>
+          <div class="testimonial-author"><div class="author-avatar">FH</div><div><strong>Fatima Hassan</strong><span data-en="Parent – Dubai" data-ar="ولي أمر – دبي">Parent – Dubai</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <span class="section-tag" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</span>
+          <h2 class="section-title" data-en="We're Here For You" data-ar="نحن هنا من أجلك">We're Here For You</h2>
+          <p data-en="Questions about routes, fees or registration? Our team is available 6 days a week." data-ar="أسئلة حول المسارات أو الرسوم أو التسجيل؟ فريقنا متاح 6 أيام في الأسبوع.">Questions about routes, fees or registration? Our team is available 6 days a week.</p>
+          <div class="contact-methods">
+            <div class="contact-method"><div class="cm-icon"><i class="fas fa-phone"></i></div><div><strong data-en="Call Us" data-ar="اتصل بنا">Call Us</strong><a href="tel:042809343">04-2809343</a></div></div>
+            <div class="contact-method"><div class="cm-icon"><i class="fas fa-envelope"></i></div><div><strong data-en="Transport Service" data-ar="خدمة النقل">Transport Service</strong><a href="mailto:atef@regalbustransport.ae">atef@regalbustransport.ae</a></div></div>
+            <div class="contact-method"><div class="cm-icon"><i class="fas fa-envelope"></i></div><div><strong data-en="Accounts & Fees" data-ar="الحسابات والرسوم">Accounts & Fees</strong><a href="mailto:rbtaccounts@regalbustransport.ae">rbtaccounts@regalbustransport.ae</a></div></div>
+            <div class="contact-method"><div class="cm-icon"><i class="fas fa-clock"></i></div><div><strong data-en="Working Hours" data-ar="ساعات العمل">Working Hours</strong><span data-en="Sat–Thu: 8:00 AM – 12:30 PM | Fri: 8:00 AM – 11:30 AM" data-ar="السبت – الخميس: ٨:٠٠ ص – ١٢:٣٠ م | الجمعة: ٨:٠٠ ص – ١١:٣٠ ص">Sat–Thu: 8:00 AM – 12:30 PM | Fri: 8:00 AM – 11:30 AM</span></div></div>
+          </div>
+          <div class="payment-methods">
+            <h4 data-en="Payment Methods" data-ar="طرق الدفع">Payment Methods</h4>
+            <div class="pm-list">
+              <span class="pm-badge"><i class="fas fa-money-bill-wave"></i> <span data-en="Cash" data-ar="نقد">Cash</span></span>
+              <span class="pm-badge"><i class="fas fa-file-invoice"></i> <span data-en="Cheque" data-ar="شيك">Cheque</span></span>
+              <span class="pm-badge"><i class="fas fa-mobile-screen"></i> <span data-en="Skiply App" data-ar="تطبيق Skiply">Skiply App</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <div class="quick-enquiry-form">
+            <h3 data-en="Quick Enquiry" data-ar="استفسار سريع">Quick Enquiry</h3>
+            <p data-en="Leave your details and we'll call you back within 24 hours." data-ar="اترك بياناتك وسنعاود الاتصال بك خلال 24 ساعة.">Leave your details and we'll call you back within 24 hours.</p>
+            <form id="quick-enquiry-form" novalidate>
+              <div class="form-group"><label data-en="Your Name *" data-ar="اسمك *">Your Name *</label><input type="text" id="qe-name" required /></div>
+              <div class="form-row">
+                <div class="form-group"><label data-en="Phone *" data-ar="الهاتف *">Phone *</label><input type="tel" id="qe-phone" required /></div>
+                <div class="form-group"><label data-en="Email" data-ar="البريد الإلكتروني">Email</label><input type="email" id="qe-email" /></div>
+              </div>
+              <div class="form-group"><label data-en="School Name" data-ar="اسم المدرسة">School Name</label><input type="text" id="qe-school" /></div>
+              <div class="form-group"><label data-en="Your Message" data-ar="رسالتك">Your Message</label><textarea id="qe-message" rows="3"></textarea></div>
+              <button type="submit" class="btn btn-primary btn-full" id="qe-submit"><i class="fas fa-paper-plane"></i><span data-en="Send Enquiry" data-ar="إرسال الاستفسار">Send Enquiry</span></button>
+              <div class="form-success" id="qe-success" style="display:none;"><i class="fas fa-circle-check"></i><span data-en="Thank you! We'll be in touch soon." data-ar="شكرًا لك! سنتواصل معك قريبًا.">Thank you! We'll be in touch soon.</span></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA STRIP ===== -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-content" data-aos="fade-up">
+        <h2 data-en="Ready to Get Your Child on Board?" data-ar="هل أنت مستعد لتسجيل طفلك؟">Ready to Get Your Child on Board?</h2>
+        <p data-en="Join hundreds of families who trust RBT for safe, reliable school transport every day." data-ar="انضم إلى مئات العائلات التي تثق في RBT لنقل مدرسي آمن وموثوق كل يوم.">Join hundreds of families who trust RBT for safe, reliable school transport every day.</p>
+        <a href="booking.html" class="btn btn-white btn-lg"><i class="fas fa-bus"></i> <span data-en="Register Now" data-ar="سجّل الآن">Register Now</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-box footer-logo"><div class="logo-rbt logo-rbt-sm"><span class="logo-r">R</span><span class="logo-b">B</span><span class="logo-t">T</span></div><div class="logo-text-stack"><span class="logo-ar">ريجال للنقل بالحافلات</span><span class="logo-en">REGAL BUS TRANSPORT</span><span class="logo-llc">L.L.C</span></div></div>
+          <p data-en="Dubai's dedicated independent school transportation company, serving families with safety and care since 2009." data-ar="شركة النقل المدرسي المستقلة في دبي، تخدم العائلات بالأمان والرعاية منذ 2009.">Dubai's dedicated independent school transportation company, serving families with safety and care since 2009.</p>
+          <div class="footer-rta"><i class="fas fa-certificate"></i><span data-en="RTA Certified Operator" data-ar="مشغّل معتمد من هيئة الطرق">RTA Certified Operator</span></div>
+        </div>
+        <div class="footer-links"><h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4><ul><li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li><li><a href="#analytics" data-en="Analytics" data-ar="التحليلات">Analytics</a></li><li><a href="#fleet" data-en="Our Fleet" data-ar="الأسطول">Our Fleet</a></li><li><a href="#coverage" data-en="Coverage Map" data-ar="خريطة التغطية">Coverage Map</a></li><li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li><li><a href="booking.html" data-en="Book Now" data-ar="احجز الآن">Book Now</a></li></ul></div>
+        <div class="footer-contact"><h4 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h4><ul><li><i class="fas fa-phone"></i><a href="tel:042809343">04-2809343</a></li><li><i class="fas fa-envelope"></i><a href="mailto:atef@regalbustransport.ae">atef@regalbustransport.ae</a></li><li><i class="fas fa-envelope"></i><a href="mailto:rbtaccounts@regalbustransport.ae">rbtaccounts@regalbustransport.ae</a></li><li><i class="fas fa-map-marker-alt"></i><span data-en="Dubai, UAE" data-ar="دبي، الإمارات">Dubai, UAE</span></li></ul></div>
+        <div class="footer-hours"><h4 data-en="Office Hours" data-ar="ساعات المكتب">Office Hours</h4><ul><li><strong data-en="Sat – Thu" data-ar="السبت – الخميس">Sat – Thu</strong><span>8:00 AM – 12:30 PM</span></li><li><strong data-en="Friday" data-ar="الجمعة">Friday</strong><span>8:00 AM – 11:30 AM</span></li></ul><div class="footer-payment"><h4 data-en="Payments Via" data-ar="الدفع عبر">Payments Via</h4><p data-en="Cash · Cheque · Skiply App" data-ar="نقد · شيك · Skiply">Cash · Cheque · Skiply App</p></div></div>
+      </div>
+      <div class="footer-bottom">
+        <p data-en="© 2025 Regal Bus Transport L.L.C – All Rights Reserved. Dubai, UAE." data-ar="© 2025 ريجال للنقل بالحافلات ذ.م.م – جميع الحقوق محفوظة.">© 2025 Regal Bus Transport L.L.C – All Rights Reserved. Dubai, UAE.</p>
+        <p class="footer-tagline" data-en="Safe Journeys. Happy Families." data-ar="رحلات آمنة. عائلات سعيدة.">Safe Journeys. Happy Families.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/mapAnimation.js"></script>
+
+  <script>
+  /* ══ AWS — Areas We Serve Accordion Toggle ══ */
+  function awsToggle(name) {
+    var card = document.getElementById('awscard-' + name);
+    if (!card) return;
+    card.classList.toggle('aws-collapsed');
+  }
+
+  /* All cards start expanded */
+  document.addEventListener('DOMContentLoaded', function() {
+    ['dubai','sharjah','ajman'].forEach(function(n) {
+      var card = document.getElementById('awscard-' + n);
+      if (card) card.classList.remove('aws-collapsed');
+    });
+  });
+  </script>
+</body>
+</html>

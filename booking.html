@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register – RBT Regal Bus Transport Dubai</title>
+  <meta name="description" content="Register your child for safe, GPS-tracked school bus transport in Dubai with Regal Bus Transport (RBT). Easy online registration." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Map picker label */
+    #map-picker { cursor: crosshair; }
+    #map-container .leaflet-container { background: #dbeafe; }
+    .map-hint {
+      position: absolute;
+      top: 12px; left: 50%; transform: translateX(-50%);
+      background: rgba(10,46,110,0.85);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 50px;
+      z-index: 999;
+      pointer-events: none;
+      white-space: nowrap;
+      letter-spacing: 0.03em;
+    }
+    /* Area select dropdown */
+    #b-area { background-image: none; }
+    #b-area optgroup { font-weight: 700; color: #0A2E6E; }
+    /* Fees link in sidebar */
+    .fees-sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      background: linear-gradient(135deg, #f0f9ff, #e8f4fc);
+      border: 1px solid #bae6fd;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      text-decoration: none;
+      color: #0369a1;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .fees-sidebar-link:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(22,165,227,0.2); text-decoration: none; color: #0369a1; }
+    .fees-sidebar-link i { font-size: 1.1rem; color: #1259B5; }
+  </style>
+</head>
+
+<body class="lang-en">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <div class="logo-box">
+          <div class="logo-rbt">
+            <span class="logo-r">R</span><span class="logo-b">B</span><span class="logo-t">T</span>
+          </div>
+          <div class="logo-text-stack">
+            <span class="logo-ar">ريجال للنقل بالحافلات</span>
+            <span class="logo-en">REGAL BUS TRANSPORT</span>
+            <span class="logo-llc">L.L.C</span>
+          </div>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+        <li><a href="index.html#safety" data-en="Safety" data-ar="السلامة">Safety</a></li>
+        <li><a href="index.html#fleet" data-en="Our Fleet" data-ar="أسطولنا">Our Fleet</a></li>
+        <li><a href="index.html#schools" data-en="Schools" data-ar="المدارس">Schools</a></li>
+        <li><a href="index.html#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
+        <li><a href="index.html#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+        <li>
+          <a href="booking.html" class="btn-nav-cta" data-en="Register Now" data-ar="سجّل الآن">Register Now</a>
+        </li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+          <span class="lang-en-label">عربي</span>
+          <span class="lang-ar-label">English</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== BOOKING HERO ===== -->
+  <section class="booking-hero">
+    <div class="container">
+      <div class="hero-badge" data-en="🚍 Easy Online Registration" data-ar="🚍 تسجيل سهل عبر الإنترنت">🚍 Easy Online Registration</div>
+      <h1 data-en="Register Your Child for Safe School Transport" data-ar="سجّل طفلك في خدمة النقل المدرسي الآمن">Register Your Child for Safe School Transport</h1>
+      <p data-en="Fill in the form below and our team will review your request and contact you within 24 hours to confirm routes and fees." data-ar="أكمل النموذج أدناه وسيراجع فريقنا طلبك ويتواصل معك خلال 24 ساعة لتأكيد المسارات والرسوم.">Fill in the form below and our team will review your request and contact you within 24 hours to confirm routes and fees.</p>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING SECTION ===== -->
+  <section class="booking-section">
+    <div class="container">
+      <div class="booking-grid">
+
+        <!-- FORM -->
+        <div class="booking-form-wrap" data-aos="fade-up">
+          <h2 data-en="Transport Registration Form" data-ar="نموذج تسجيل خدمة النقل">Transport Registration Form</h2>
+          <p data-en="All fields marked with * are required. We'll confirm availability in your area before finalising." data-ar="جميع الحقول المميّزة بـ * مطلوبة. سنتحقق من توفر الخدمة في منطقتك قبل التأكيد النهائي.">All fields marked with * are required. We'll confirm availability in your area before finalising.</p>
+
+          <!-- Success Banner -->
+          <div class="form-success booking-success-banner" id="booking-success" style="display:none;">
+            <i class="fas fa-circle-check" style="font-size:1.5rem;"></i>
+            <div>
+              <strong data-en="Registration Received!" data-ar="تم استلام طلبك!">Registration Received!</strong>
+              <span class="success-text" data-en="Thank you! Your registration has been received. We will contact you within 24 hours." data-ar="شكرًا لك! تم استلام طلبك. سنتواصل معك خلال 24 ساعة.">Thank you! Your registration has been received. We will contact you within 24 hours.</span>
+            </div>
+          </div>
+
+          <form id="booking-form" novalidate>
+
+            <!-- PARENT INFO -->
+            <div class="form-section-title" data-en="👤 Parent / Guardian Information" data-ar="👤 معلومات ولي الأمر">👤 Parent / Guardian Information</div>
+
+            <div class="form-group">
+              <label data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label>
+              <input type="text" id="b-parent-name" data-placeholder-ar="الاسم الكامل" placeholder="Parent / Guardian full name" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label data-en="Phone Number *" data-ar="رقم الهاتف *">Phone Number *</label>
+                <input type="tel" id="b-phone" data-placeholder-ar="مثال: 05xxxxxxxx" placeholder="e.g. 05xxxxxxxx" required />
+              </div>
+              <div class="form-group">
+                <label data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+                <input type="email" id="b-email" data-placeholder-ar="your@email.com" placeholder="your@email.com" />
+              </div>
+            </div>
+
+            <!-- STUDENT INFO -->
+            <div class="form-section-title" data-en="🎒 Student Information" data-ar="🎒 معلومات الطالب">🎒 Student Information</div>
+
+            <div class="form-group">
+              <label data-en="Student Full Name *" data-ar="اسم الطالب الكامل *">Student Full Name *</label>
+              <input type="text" id="b-student-name" data-placeholder-ar="اسم الطالب الكامل" placeholder="Student's full name" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label data-en="School Name" data-ar="اسم المدرسة">School Name</label>
+                <input type="text" id="b-school" data-placeholder-ar="اسم المدرسة" placeholder="e.g. Arab Unity School" />
+              </div>
+              <div class="form-group">
+                <label data-en="Grade / Year" data-ar="الصف / السنة الدراسية">Grade / Year</label>
+                <select id="b-grade">
+                  <option value="" data-en="Select Grade" data-ar="اختر الصف">Select Grade</option>
+                  <option value="FS1">FS1 (Foundation Stage 1)</option>
+                  <option value="FS2">FS2 (Foundation Stage 2)</option>
+                  <option value="Year 1">Year 1</option>
+                  <option value="Year 2">Year 2</option>
+                  <option value="Year 3">Year 3</option>
+                  <option value="Year 4">Year 4</option>
+                  <option value="Year 5">Year 5</option>
+                  <option value="Year 6">Year 6</option>
+                  <option value="Year 7">Year 7</option>
+                  <option value="Year 8">Year 8</option>
+                  <option value="Year 9">Year 9</option>
+                  <option value="Year 10">Year 10</option>
+                  <option value="Year 11">Year 11</option>
+                  <option value="Year 12">Year 12</option>
+                  <option value="Year 13">Year 13</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- TRANSPORT INFO -->
+            <div class="form-section-title" data-en="🚍 Transport Details" data-ar="🚍 تفاصيل خدمة النقل">🚍 Transport Details</div>
+
+            <div class="form-group">
+              <label data-en="Pickup Area *" data-ar="منطقة الاصطحاب *">Pickup Area *</label>
+              <select id="b-area" required>
+                <option value="">-- Select your pickup area --</option>
+                <optgroup label="🇦🇪 Dubai — 14 Areas">
+                  <option value="Mirdif / Mizhar-1 / Muhaisna-1">Mirdif / Mizhar-1 / Muhaisna-1</option>
+                  <option value="Rashidiya / Al Warqa / Oud Muteena">Rashidiya / Al Warqa / Oud Muteena</option>
+                  <option value="Al Qusais / Al Twar">Al Qusais / Al Twar</option>
+                  <option value="Muhaisnah-4 / Alwasl Village">Muhaisnah-4 / Alwasl Village</option>
+                  <option value="Al Nahda (Dubai)">Al Nahda (Dubai)</option>
+                  <option value="International City / Rasl Al Khor / Nadd Al Hammar / Garhoud">International City / Rasl Al Khor / Nadd Al Hammar / Garhoud</option>
+                  <option value="Silicon Oasis / Academic City / Sky Courts / Liwan">Silicon Oasis / Academic City / Sky Courts / Liwan</option>
+                  <option value="Deira / Al Mamzar">Deira / Al Mamzar</option>
+                  <option value="Bur Dubai / Karama / Jaddaf">Bur Dubai / Karama / Jaddaf</option>
+                  <option value="Al Satwa">Al Satwa</option>
+                  <option value="Al Quoz">Al Quoz</option>
+                  <option value="Al Barsha 1">Al Barsha 1</option>
+                  <option value="Majan / Al Barari">Majan / Al Barari</option>
+                  <option value="JVC / Dubai Sports City">JVC / Dubai Sports City</option>
+                </optgroup>
+                <optgroup label="🇦🇪 Sharjah — 9 Areas">
+                  <option value="Al Sharjah / Sharjah City">Al Sharjah / Sharjah City</option>
+                  <option value="Al Majaz">Al Majaz</option>
+                  <option value="Al Nahda (Sharjah)">Al Nahda (Sharjah)</option>
+                  <option value="Al Taawun">Al Taawun</option>
+                  <option value="Al Qasimia">Al Qasimia</option>
+                  <option value="Muwaileh">Muwaileh</option>
+                  <option value="Al Khan">Al Khan</option>
+                  <option value="Al Butina">Al Butina</option>
+                  <option value="Halwan">Halwan</option>
+                </optgroup>
+                <optgroup label="🇦🇪 Ajman — 6 Areas">
+                  <option value="Ajman City">Ajman City</option>
+                  <option value="Al Rashidiya (Ajman)">Al Rashidiya (Ajman)</option>
+                  <option value="Al Nuaimia">Al Nuaimia</option>
+                  <option value="Al Rumailah">Al Rumailah</option>
+                  <option value="Al Jurf">Al Jurf</option>
+                  <option value="Al Hamidiyah">Al Hamidiyah</option>
+                </optgroup>
+                <option value="Other / Not listed">Other / Not listed above</option>
+              </select>
+            </div>
+
+            <!-- LOCATION MAP PICKER -->
+            <div class="form-group">
+              <label>📍 Pin Your Exact Pickup Location</label>
+              <p style="font-size:0.78rem;color:#64748b;margin:0 0 10px;">Click on the map to drop a pin at your home/pickup point. Drag to adjust. This helps our team plan the most efficient route for your child.</p>
+              <div id="map-picker" style="width:100%;height:340px;border-radius:12px;border:2px solid #e2e8f0;overflow:hidden;background:#e8f4fc;position:relative;">
+                <div class="map-hint" id="map-hint"><i class="fas fa-hand-pointer"></i>&nbsp; Click anywhere to drop your pin</div>
+                <div id="map-loading" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#f0f6ff;flex-direction:column;gap:10px;z-index:10;">
+                  <i class="fas fa-map-location-dot" style="font-size:2rem;color:#1259B5;"></i>
+                  <span style="font-size:0.85rem;color:#475569;font-weight:600;">Loading map…</span>
+                </div>
+                <div id="map-container" style="width:100%;height:100%;"></div>
+              </div>
+              <div id="map-coords-display" style="margin-top:8px;padding:10px 14px;background:#f0f9ff;border:1px solid #bae6fd;border-radius:8px;font-size:0.78rem;color:#0369a1;display:none;align-items:center;gap:8px;">
+                <i class="fas fa-location-dot" style="color:#1259B5;flex-shrink:0;"></i>
+                <span id="map-coords-text">Location selected</span>
+                <button type="button" onclick="clearMapPin()" style="margin-left:auto;background:none;border:none;color:#94a3b8;cursor:pointer;font-size:0.75rem;"><i class="fas fa-times"></i> Clear</button>
+              </div>
+              <input type="hidden" id="b-lat" />
+              <input type="hidden" id="b-lng" />
+              <input type="hidden" id="b-map-address" />
+            </div>
+
+            <div class="form-group">
+              <label data-en="Additional Notes / Questions" data-ar="ملاحظات إضافية / أسئلة">Additional Notes / Questions</label>
+              <textarea id="b-message" rows="4" data-placeholder-ar="أي معلومات إضافية تريد مشاركتها..." placeholder="Any additional information or questions..."></textarea>
+            </div>
+
+            <!-- IMPORTANT NOTE -->
+            <div class="booking-note" id="booking-note">
+              <i class="fas fa-circle-info"></i>
+              <div>
+                <strong data-en="Please Note:" data-ar="يرجى الملاحظة:">Please Note:</strong>
+                <ul>
+                  <li>Our team will contact you within <strong>3 working days</strong> to confirm route and fees.</li>
+                  <li data-en="If registering as a new student, a registration fee of AED 50/- is applicable." data-ar="إذا كنت تسجّل طالبًا جديدًا، تُطبّق رسوم تسجيل بقيمة 50 درهمًا.">If registering as a new student, a registration fee of AED 50/- is applicable.</li>
+                  <li data-en="Transport fees are calculated for 10 months and payable in 3 term-wise installments." data-ar="تُحسب رسوم النقل لمدة 10 أشهر وتُدفع على 3 أقساط بحسب الفصل الدراسي.">Transport fees are calculated for 10 months and payable in 3 term-wise installments.</li>
+                  <li data-en="Buses operate on fixed routes. Please confirm area availability before registering." data-ar="تسير الحافلات على مسارات محددة. يرجى التأكد من توفر الخدمة في منطقتك قبل التسجيل.">Buses operate on fixed routes. Please confirm area availability before registering.</li>
+                </ul>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-lg" id="booking-submit" style="margin-top:8px;">
+              <i class="fas fa-bus"></i>
+              <span data-en="Submit Registration Request" data-ar="إرسال طلب التسجيل">Submit Registration Request</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="booking-sidebar">
+
+          <!-- Fees Structure Quick Link -->
+          <a href="fees.html" class="fees-sidebar-link" data-aos="fade-left">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <div>
+              <div>View Fee Structure 2025–26</div>
+              <div style="font-size:0.72rem;font-weight:400;color:#64748b;margin-top:2px;">AUS routes, term fees &amp; installment dates</div>
+            </div>
+            <i class="fas fa-chevron-right" style="margin-left:auto;font-size:0.7rem;color:#94a3b8;"></i>
+          </a>
+
+          <!-- Contact Card -->
+          <div class="info-card" data-aos="fade-left" data-aos-delay="100">
+            <h4 data-en="Need Help?" data-ar="تحتاج مساعدة؟">Need Help?</h4>
+            <ul class="info-list">
+              <li>
+                <i class="fas fa-phone"></i>
+                <div>
+                  <strong data-en="Call us directly:" data-ar="اتصل بنا مباشرةً:">Call us directly:</strong>
+                  <a href="tel:042809343" style="color:var(--blue-mid);font-weight:600;">04-2809343</a>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <strong data-en="Transport Enquiries:" data-ar="استفسارات النقل:">Transport Enquiries:</strong>
+                  <a href="mailto:atef@regalbustransport.ae" style="color:var(--blue-mid);font-size:0.82rem;">atef@regalbustransport.ae</a>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <strong data-en="Accounts & Fees:" data-ar="الحسابات والرسوم:">Accounts & Fees:</strong>
+                  <a href="mailto:rbtaccounts@regalbustransport.ae" style="color:var(--blue-mid);font-size:0.82rem;">rbtaccounts@regalbustransport.ae</a>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong data-en="Office Hours:" data-ar="ساعات المكتب:">Office Hours:</strong>
+                  <span data-en="Sat–Thu: 8:00 AM – 12:30 PM" data-ar="السبت – الخميس: ٨:٠٠ ص – ١٢:٣٠ م">Sat–Thu: 8:00 AM – 12:30 PM</span>
+                  <span data-en="Fri: 8:00 AM – 11:30 AM" data-ar="الجمعة: ٨:٠٠ ص – ١١:٣٠ ص">Fri: 8:00 AM – 11:30 AM</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Installments Card -->
+          <div class="info-card" data-aos="fade-left" data-aos-delay="200">
+            <h4 data-en="📅 Payment Installments 2025–26" data-ar="📅 أقساط الدفع 2025–26">📅 Payment Installments 2025–26</h4>
+            <div class="installment-list">
+              <div class="inst-item">
+                <strong data-en="1st Installment" data-ar="القسط الأول">1st Installment</strong>
+                <span data-en="Due on or before 25th August 2025" data-ar="يُستحق في أو قبل 25 أغسطس 2025">Due on or before 25th August 2025</span>
+              </div>
+              <div class="inst-item">
+                <strong data-en="2nd Installment" data-ar="القسط الثاني">2nd Installment</strong>
+                <span data-en="Due on or before 1st January 2026" data-ar="يُستحق في أو قبل 1 يناير 2026">Due on or before 1st January 2026</span>
+              </div>
+              <div class="inst-item">
+                <strong data-en="3rd Installment" data-ar="القسط الثالث">3rd Installment</strong>
+                <span data-en="Due on or before 1st April 2026" data-ar="يُستحق في أو قبل 1 أبريل 2026">Due on or before 1st April 2026</span>
+              </div>
+            </div>
+            <p style="font-size:0.78rem;color:var(--gray-400);margin-top:12px;" data-en="Note: No refund for unused portion of the term." data-ar="ملاحظة: لا يوجد استرداد للجزء غير المستخدم من الفصل الدراسي.">Note: No refund for unused portion of the term.</p>
+          </div>
+
+          <!-- Payment Methods -->
+          <div class="info-card" data-aos="fade-left" data-aos-delay="300">
+            <h4 data-en="💳 Payment Methods" data-ar="💳 طرق الدفع">💳 Payment Methods</h4>
+            <ul class="info-list">
+              <li><i class="fas fa-money-bill-wave"></i> <span data-en="Cash" data-ar="نقد">Cash</span></li>
+              <li><i class="fas fa-file-invoice"></i> <span data-en="Cheque payable to: Regal Bus Transport LLC" data-ar="شيك لصالح: ريجال للنقل بالحافلات ذ.م.م">Cheque payable to: Regal Bus Transport LLC</span></li>
+              <li><i class="fas fa-mobile-screen"></i> <span data-en="Skiply Mobile App" data-ar="تطبيق Skiply للهاتف المحمول">Skiply Mobile App</span></li>
+            </ul>
+          </div>
+
+          <!-- Why RBT mini card -->
+          <div class="info-card" style="background: var(--gradient-main); border:none;" data-aos="fade-left" data-aos-delay="400">
+            <h4 style="color:#fff;" data-en="✅ Why Choose RBT?" data-ar="✅ لماذا تختار RBT؟">✅ Why Choose RBT?</h4>
+            <ul class="info-list">
+              <li style="color:rgba(255,255,255,0.85);">
+                <i class="fas fa-shield-halved" style="color:var(--cyan);"></i>
+                <span data-en="RTA Certified Fleet of 81 buses (77 active)" data-ar="أسطول 81 حافلة معتمدة من هيئة الطرق (77 نشطة)">RTA Certified Fleet of 81 buses (77 active)</span>
+              </li>
+              <li style="color:rgba(255,255,255,0.85);">
+                <i class="fas fa-location-dot" style="color:var(--cyan);"></i>
+                <span data-en="Live GPS Tracking on every bus" data-ar="تتبع GPS مباشر على كل حافلة">Live GPS Tracking on every bus</span>
+              </li>
+              <li style="color:rgba(255,255,255,0.85);">
+                <i class="fas fa-camera" style="color:var(--cyan);"></i>
+                <span data-en="CCTV cameras on board" data-ar="كاميرات مراقبة على متن الحافلة">CCTV cameras on board</span>
+              </li>
+              <li style="color:rgba(255,255,255,0.85);">
+                <i class="fas fa-user-tie" style="color:var(--cyan);"></i>
+                <span data-en="Trained drivers & attendants" data-ar="سائقون ومرافقون مدرّبون">Trained drivers & attendants</span>
+              </li>
+              <li style="color:rgba(255,255,255,0.85);">
+                <i class="fas fa-bell" style="color:var(--cyan);"></i>
+                <span data-en="SMS alerts for parents" data-ar="تنبيهات رسائل نصية لأولياء الأمور">SMS alerts for parents</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-box footer-logo">
+            <div class="logo-rbt logo-rbt-sm">
+              <span class="logo-r">R</span><span class="logo-b">B</span><span class="logo-t">T</span>
+            </div>
+            <div class="logo-text-stack">
+              <span class="logo-ar">ريجال للنقل بالحافلات</span>
+              <span class="logo-en">REGAL BUS TRANSPORT</span>
+              <span class="logo-llc">L.L.C</span>
+            </div>
+          </div>
+          <p data-en="Dubai's dedicated independent school transportation company, serving families with safety, reliability, and care since 2009." data-ar="شركة النقل المدرسي المستقلة المخصصة في دبي، تخدم العائلات بالأمان والموثوقية والرعاية منذ 2009.">Dubai's dedicated independent school transportation company, serving families with safety, reliability, and care since 2009.</p>
+          <div class="footer-rta">
+            <i class="fas fa-certificate"></i>
+            <span data-en="RTA Certified Operator" data-ar="مشغّل معتمد من هيئة الطرق">RTA Certified Operator</span>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+          <ul>
+            <li><a href="index.html#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+            <li><a href="index.html#safety" data-en="Safety" data-ar="السلامة">Safety</a></li>
+            <li><a href="index.html#fleet" data-en="Our Fleet" data-ar="أسطولنا">Our Fleet</a></li>
+            <li><a href="index.html#schools" data-en="Schools" data-ar="المدارس">Schools</a></li>
+            <li><a href="index.html#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
+            <li><a href="booking.html" data-en="Register Now" data-ar="سجّل الآن">Register Now</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> <a href="tel:042809343">04-2809343</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:atef@regalbustransport.ae">atef@regalbustransport.ae</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:rbtaccounts@regalbustransport.ae">rbtaccounts@regalbustransport.ae</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> <span data-en="Dubai, United Arab Emirates" data-ar="دبي، الإمارات العربية المتحدة">Dubai, United Arab Emirates</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-hours">
+          <h4 data-en="Office Hours" data-ar="ساعات المكتب">Office Hours</h4>
+          <ul>
+            <li>
+              <strong data-en="Sat – Thu" data-ar="السبت – الخميس">Sat – Thu</strong>
+              <span>8:00 AM – 12:30 PM</span>
+            </li>
+            <li>
+              <strong data-en="Friday" data-ar="الجمعة">Friday</strong>
+              <span>8:00 AM – 11:30 AM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-en="© 2025 Regal Bus Transport L.L.C – All Rights Reserved. Dubai, UAE." data-ar="© 2025 ريجال للنقل بالحافلات ذ.م.م – جميع الحقوق محفوظة. دبي، الإمارات.">© 2025 Regal Bus Transport L.L.C – All Rights Reserved. Dubai, UAE.</p>
+        <p class="footer-tagline" data-en="Safe Journeys. Happy Families." data-ar="رحلات آمنة. عائلات سعيدة.">Safe Journeys. Happy Families.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Leaflet Map -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+
+  <script>
+  /* ══ Leaflet Map Picker ══ */
+  var mapInstance = null;
+  var mapMarker  = null;
+  var mapReady   = false;
+
+  function initMapPicker() {
+    if (mapReady) return;
+    mapReady = true;
+
+    var el = document.getElementById('map-container');
+    if (!el) return;
+
+    // Hide loading overlay
+    var loading = document.getElementById('map-loading');
+    if (loading) loading.style.display = 'none';
+
+    // Centre on Dubai
+    mapInstance = L.map('map-container', { zoomControl: true }).setView([25.2048, 55.2708], 11);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 19
+    }).addTo(mapInstance);
+
+    // Custom icon
+    var pinIcon = L.divIcon({
+      html: '<div style="width:32px;height:32px;background:#1259B5;border:3px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 12px rgba(18,89,181,0.4);"></div>',
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      className: ''
+    });
+
+    mapInstance.on('click', function(e) {
+      var lat = e.latlng.lat.toFixed(6);
+      var lng = e.latlng.lng.toFixed(6);
+
+      if (mapMarker) {
+        mapMarker.setLatLng(e.latlng);
+      } else {
+        mapMarker = L.marker(e.latlng, { icon: pinIcon, draggable: true }).addTo(mapInstance);
+        mapMarker.on('dragend', function() {
+          updateCoords(mapMarker.getLatLng());
+        });
+      }
+      updateCoords(e.latlng);
+
+      // Reverse geocode using Nominatim
+      fetch('https://nominatim.openstreetmap.org/reverse?format=json&lat=' + lat + '&lon=' + lng)
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          var addr = d.display_name || ('Lat: ' + lat + ', Lng: ' + lng);
+          document.getElementById('map-coords-text').textContent = addr;
+          document.getElementById('b-map-address').value = addr;
+        })
+        .catch(function(){
+          document.getElementById('map-coords-text').textContent = 'Lat: ' + lat + ', Lng: ' + lng;
+        });
+    });
+  }
+
+  function updateCoords(latlng) {
+    var lat = latlng.lat.toFixed(6);
+    var lng = latlng.lng.toFixed(6);
+    document.getElementById('b-lat').value = lat;
+    document.getElementById('b-lng').value = lng;
+    var display = document.getElementById('map-coords-display');
+    display.style.display = 'flex';
+    if (!document.getElementById('map-coords-text').textContent.includes('Lat')) {
+      document.getElementById('map-coords-text').textContent = 'Lat: ' + lat + ', Lng: ' + lng;
+    }
+  }
+
+  function clearMapPin() {
+    if (mapMarker && mapInstance) {
+      mapInstance.removeLayer(mapMarker);
+      mapMarker = null;
+    }
+    document.getElementById('b-lat').value = '';
+    document.getElementById('b-lng').value = '';
+    document.getElementById('b-map-address').value = '';
+    document.getElementById('map-coords-display').style.display = 'none';
+  }
+
+  // Init map when in viewport
+  var mapObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        setTimeout(initMapPicker, 200);
+        mapObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.1 });
+
+  var mapEl = document.getElementById('map-picker');
+  if (mapEl) mapObserver.observe(mapEl);
+
+  /* ══ Form Submit → send email via mailto ══ */
+  document.getElementById('booking-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var parentName  = document.getElementById('b-parent-name').value.trim();
+    var phone       = document.getElementById('b-phone').value.trim();
+    var email       = document.getElementById('b-email').value.trim();
+    var studentName = document.getElementById('b-student-name').value.trim();
+    var school      = document.getElementById('b-school').value.trim();
+    var grade       = document.getElementById('b-grade').value;
+    var area        = document.getElementById('b-area').value;
+    var lat         = document.getElementById('b-lat').value;
+    var lng         = document.getElementById('b-lng').value;
+    var mapAddr     = document.getElementById('b-map-address').value;
+    var notes       = document.getElementById('b-message').value.trim();
+
+    if (!parentName || !phone || !area) {
+      alert('Please fill in all required fields (Name, Phone, Area).');
+      return;
+    }
+
+    // Build email body
+    var body = 'NEW STUDENT REGISTRATION REQUEST\n';
+    body += '================================\n\n';
+    body += 'PARENT INFORMATION\n';
+    body += 'Full Name: ' + parentName + '\n';
+    body += 'Phone: ' + phone + '\n';
+    body += 'Email: ' + (email || 'Not provided') + '\n\n';
+    body += 'STUDENT INFORMATION\n';
+    body += 'Student Name: ' + studentName + '\n';
+    body += 'School: ' + (school || 'Not specified') + '\n';
+    body += 'Grade: ' + (grade || 'Not specified') + '\n\n';
+    body += 'TRANSPORT DETAILS\n';
+    body += 'Pickup Area: ' + area + '\n';
+    if (mapAddr) body += 'Pinned Location: ' + mapAddr + '\n';
+    if (lat && lng) body += 'Coordinates: ' + lat + ', ' + lng + '\n';
+    if (notes) body += '\nNotes: ' + notes + '\n';
+    body += '\n--- Submitted via RBT website ---';
+
+    var subject = encodeURIComponent('New Bus Registration – ' + studentName + ' (' + area + ')');
+    var bodyEnc = encodeURIComponent(body);
+    var mailtoLink = 'mailto:atef@regalbustransport.ae?subject=' + subject + '&body=' + bodyEnc;
+
+    // Open mail client
+    window.location.href = mailtoLink;
+
+    // Show success banner
+    var btn = document.getElementById('booking-submit');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-check-circle"></i> Submitted!';
+    document.getElementById('booking-success').style.display = 'flex';
+    window.scrollTo({ top: document.getElementById('booking-success').offsetTop - 100, behavior: 'smooth' });
+
+    // Re-enable after 5s
+    setTimeout(function() {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-bus"></i> <span>Submit Registration Request</span>';
+    }, 5000);
+  });
+  </script>
+</body>
+</html>
